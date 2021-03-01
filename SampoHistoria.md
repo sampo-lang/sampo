@@ -1,6 +1,8 @@
+
+
 **Sampo-ohjelmointikieli ja Sampo-ohjelmistotuote 1983-1987**
 
-
+Testiversio 2
 
 Oulun yliopiston tietojenkäsittelyopin laitoksella kehitettiin vuonna 1983 uusi ohjelmoinnin alkeisopetukseen suunnattu ohjelmointikieli nimeltään Sampo. Kehittämiseen osallistui kolme TOL:n assistenttia: Heikki Putkonen, Ilkka Tervonen ja Kari Kuutti. Kaikki osallistuivat kielen toiminnallisuuden ja käyttöliittymän määrittelyyn, mutta toteutuksen suunnittelun ja ohjelmoinnin teki kokonaan Heikki Putkonen.
 
