@@ -1,0 +1,28 @@
+OPEN         file
+LIST  (n -)  Display screen n and make it current screen        
+LOAD  (n -)  Load n screen and interpret into dictionary        
+
+FLUSH        SAVE-BUFFERS and de-allocate buffers in memory     
+SAVE-BUFFERS   Write all buffers to disk files   
+UPDATE       Mark current screen for save to disk               
+
+T   (n -)    Make n the current line to edit                   
+O xxx          Overwrites xxx onto text of current line         
+P xxxx       Put the string xxx in the current line             
+U xxxx       Insert the string xxxx under the current line      
+X            Delete current line                                
+NEW   (n -)  Input multiple lines starting at n                 
+
+F xxxx       Find and move to END of xxxx                       
+D xxxx       Delete string xxxx and leave cursor at string      
+TILL xxxx    Delete all text from cursor to end of xxxx         
+J xxxx       Delete till begining of string xxxx                
+
+EDIT  (n -)  Invokes editor on n screen                         
+EDITOR       Makes the editor vocabulary current vocabulary     
+DONE         Do flush and return from editor vocabulary         
+
+OPEN xxxx    Open file xxxx.xxx and make it current file        
+MORE (n -)   Add n more screens to the end of current file      
+                                                                    
+
