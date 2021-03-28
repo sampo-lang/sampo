@@ -1,0 +1,1330 @@
+
+
+*** ruutu 0 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 1 ****
+editor also                                                     
+                                                                
+: viive 10000 0 do loop ;                                       
+                                                                
+: taap  vidio02 1- vidio20c ;                                   
+                                                                
+variable merkki                                                 
+                                                                
+: kurso                                                         
+     2048 0 0 0 vidio 2drop drop 255 and merkki !               
+     220    tavallinen                                          
+     viive taap                                                 
+     merkki @ tavallinen                                        
+     viive taap                                                 
+;                                                               
+                                                                
+
+
+*** ruutu 2 ****
+                                                                
+Tervetuloa suomalaisen SAMPO  kielen k{ytt{j{ksi                
+=================================================               
+SAMPO-kielen ominaispiirteit{ ovat tulkkityyppisyys,            
+grafiikan tuki ja kielen voimistuvuus. SAMPO-kielen             
+kehitt{misperiaatteen taustalla on oppimispsykologia -          
+"tekem{ll{ oppimisen" tehokkuus "lukemalla oppimiseen"          
+verrattuna.                                                     
+                                                                
+N{iden piirteiden ansiosta SAMPO on selv{piirteinen ja          
+helposti opittavissa.                                           
+                                                                
+SAMPO-kielen kehitt{j{ ja p{{myyj{ on                           
+SYSTIIMI  OY                                                    
+Aleksanterinkatu 21 A 6                                         
+90100 OULU  puh. 227036                                         
+
+
+*** ruutu 3 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 4 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 5 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 6 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 7 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 8 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 9 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 10 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 11 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 12 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 13 ****
+\ Aputavaraa                                                    
+: KOTIIN                                                        
+  YL\S 320 XCU ! 100 YCU ! 90 KULMA !                           
+  N{KYY ON PIIRR{ ALAS ;                                        
+                                                                
+: PAIKKA  2FIX                          \ XCU YCU , --- )       
+  YL\S YCU ! XCU ! ALAS ;                                       
+hex                                                             
+: UUSI                                                          
+  YL\S N{KYY OFF                                                
+;                                                               
+                                                                
+                                                                
+decimal                                                         
+: KONNA                                                         
+  1 VIERIT ! UUSI KOTIIN ;                                      
+
+
+*** ruutu 14 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 15 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 16 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 17 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 18 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 19 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 20 ****
+\ Pylv{sdiagrammi                                               
+                                                                
+muuttuja bx    muuttuja by                                      
+muuttuja tx    muuttuja ty                                      
+                                                                
+luo pylv{s                                                      
+        kertaa bx arvo   by + i =                               
+               bx + 20 = by + i = jana                          
+        viel{?                                                  
+valmis                                                          
+                                                                
+luo piirr{pylv{s                                                
+    pylv{s                                                      
+    bx + 32 = bx lle                                            
+valmis                                                          
+                                                                
+
+
+*** ruutu 21 ****
+\ Graafin teko                                                  
+                                                                
+luo xtini                                                       
+    8 bx lle 50 by lle                                          
+    1 tx lle 20 ty lle                                          
+valmis                                                          
+                                                                
+luo nimitulosta                                                 
+    ty arvo tx arvo tulosta                                     
+    tx + 4 = tx lle                                             
+    ty + 1 = ty lle                                             
+    ty > 24 tosi? 20 ty lle jatka                               
+valmis                                                          
+                                                                
+luo odota                                                       
+    100 kertaa 100 kertaa viel{? viel{? valmis                  
+
+
+*** ruutu 22 ****
+\ p{{kierto                                                     
+luo demoluuppi                                                  
+  toista 0 lopeta?                                              
+    uusi xtini                                                  
+    " Sadem{{r{ 2 35 tulosta                                    
+    ( sadem{{r{ = piirr{pylv{s kaupunki nimitulosta ) kent{t lle
+    poimi odota                                                 
+    uusi xtini                                                  
+    " Max.l{mp|tila 2 35 tulosta                                
+    ( korkein_l{mp|tila * 2 + 4 = piirr{pylv{s kaupunki         
+      nimitulosta ) kent{t lle poimi odota                      
+    uusi xtini  " Min.l{mp|tila 2 35 tulosta                    
+    ( alin_l{mp|tila * 1 + 4 = piirr{pylv{s kaupunki            
+      nimitulosta ) kent{t lle poimi odota                      
+  alkuun                                                        
+valmis                                                          
+
+
+*** ruutu 23 ****
+\ starttaus                                                     
+                                                                
+luo demo                                                        
+    avaa                                                        
+    tietokanta                                                  
+    demoluuppi                                                  
+valmis                                                          
+                                                                
+demo paikat.tka                                                 
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 24 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 25 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 26 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 27 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 28 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 29 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 30 ****
+| kello                                                         
+luo merkki yl|s 50 eteen alas 10 eteen yl|s 60 taakse alas valmi
+s                                                               
+luo taulu 12 kertaa merkki 30 oikea valmis                      
+                                                                
+luo minuuttiviisari 40 eteen 40 taakse valmis                   
+                                                                
+luo tuntiviisari 20 eteen 20 taakse valmis                      
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 31 ****
+| kello, osa 2                                                  
+                                                                
+muuttuja minuutit muuttuja tunnit                               
+90 minuutit lle                                                 
+ luo tik                                                        
+     pyyhi                                                      
+     minuutit arvo kulma minuuttiviisari                        
+     tunnit arvo kulma tuntiviisari                             
+     piirr{                                                     
+     minuutit arvo - 6 = minuutit lle                           
+     tunnit arvo - 0.5 = tunnit lle                             
+     minuutit arvo kulma minuuttiviisari                        
+     tunnit arvo kulma tuntiviisari                             
+   1000 kertaa viel{? valmis                                    
+valmis                                                          
+                                                                
+
+
+*** ruutu 32 ****
+                                                                
+konna                                                           
+30 eteen 90 oikea 30 eteen 90 oikea                             
+30 eteen 90 oikea 30 eteen 90 oikea                             
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 33 ****
+                                                                
+luo ympyr{                                                      
+   konna                                                        
+   36 kertaa 10 eteen 10 oikea viel{?                           
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 34 ****
+\ seppeleenpiirto                                               
+                                                                
+luo :askel kaari 8 kertaa :askel eteen 15 oikea valmis          
+                                                                
+luo :a apila                                                    
+   3 kertaa :a kaari 180 oikea :a kaari 60 oikea                
+valmis                                                          
+                                                                
+luo :a seppele                                                  
+   6 kertaa :a apila yl|s :a * 20 = eteen                       
+   60 oikea alas                                                
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 35 ****
+\ Hiutaleen piirto                                              
+                                                                
+luo :sivu kolmio 3 kertaa :sivu eteen 120 oikea valmis          
+                                                                
+luo :sivu kuusio 6 kertaa :sivu kolmio 60 oikea valmis          
+                                                                
+luo :s kpari :s kuusio :s * 2 = eteen :s kuusio valmis          
+                                                                
+luo :s hiutale 6 kertaa :s kpari 120 oikea :s * 2 = eteen       
+     60 vasen valmis                                            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 36 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 37 ****
+\  Potenssilasku                                                
+                                                                
+muuttuja x muuttuja y                                           
+luo potenssi                                                    
+  5 kertaa                                                      
+        x ^ i + y ^ i   = .                                     
+  viel{?                                                        
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 38 ****
+|  Parittomuus/parillisuustesti                                 
+luo pari                                                        
+   jos  lueluku  mod  2 == 0                                    
+   tosi?  ( parillinen ) .                                      
+   muuten  ( pariton )  .                                       
+   jatka                                                        
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 39 ****
+| Pienimm{n luvun etsiv{ sana                                   
+muuttuja x  muuttuja pienin                                     
+luo pieluku                                                     
+   ( Montako lukua ) . lueluku                                  
+   kertaa                                                       
+      jos  i  == 1                                              
+         tosi?  lueluku  pienin  lle                            
+         muuten                                                 
+           lueluku  x lle                                       
+           jos  x  <  pienin                                    
+               tosi?  x  arvo pienin  lle                       
+           jatka                                                
+      jatka                                                     
+   viel{?                                                       
+   ( Pienin luku oli ) . pienin arvo  .                         
+valmis                                                          
+
+
+*** ruutu 40 ****
+                                                                
+LUO KULMIO 2 KERTAA                                             
+    40 ETEEN 45 OIKEA 40 ETEEN 135 OIKEA                        
+VALMIS                                                          
+                                                                
+LUO LEHTI 2 KERTAA                                              
+    15 KERTAA 5 ETEEN 3 OIKEA VIEL{? 135 OIKEA                  
+VALMIS                                                          
+                                                                
+LUO YHDISTELM{ 6 KERTAA                                         
+    JOS I MOD 2  TOSI?                                          
+        LEHTI 60 OIKEA                                          
+    MUUTEN                                                      
+        KULMIO  60 OIKEA                                        
+    JATKA                                                       
+VALMIS                                                          
+
+
+*** ruutu 41 ****
+|  Lukujen testausta                                            
+muuttuja x1                                                     
+luo  lukutesti2                                                 
+   lueluku  x1  lle                                             
+   toista                                                       
+      x1 > 0                                                    
+   yh{?                                                         
+      jos                                                       
+         x1 mod 2 == 0                                          
+      tosi?  ( parillinen ) .                                   
+      muuten  ( pariton ) .                                     
+      jatka                                                     
+      lueluku  x1 lle                                           
+   alkuun                                                       
+valmis                                                          
+                                                                
+
+
+*** ruutu 42 ****
+muuttuja x1                                                     
+luo  viikko                                                     
+   toista                                                       
+      lueluku  x1  lle  x1 > 0                                  
+   yh{?                                                         
+      jos  x1  on                                               
+         1  niin  ( Maanantai ) . loppuun                       
+         2  niin  ( Tiistai ) . loppuun                         
+         3  niin  ( Keskiviikko ) . loppuun                     
+         4  niin  ( Torstai ) . loppuun                         
+         5  niin  ( Perjantai ) . loppuun                       
+         6  niin  ( Lauantai ) . loppuun                        
+         7  niin  ( Sunnuntai ) . loppuun                       
+         ellei  ( Ei sallittu ) .                               
+      loppu                                                     
+   alkuun  valmis                                               
+
+
+*** ruutu 43 ****
+| Pienimm{n luvun etsint{{                                      
+luo pieluku                                                     
+   ( Montako lukua ) . lueluku                                  
+   kertaa                                                       
+      jos  i == 1                                               
+      tosi?  lueluku  tuplaa                                    
+      muuten                                                    
+         jos                                                    
+            lueluku  tuplaa  kierr{  <  vaihda                  
+         tosi?                                                  
+            vaihda  poista  tuplaa                              
+         muuten                                                 
+            poista  tuplaa                                      
+         jatka                                                  
+   jatka  viel{?                                                
+( Pienin luku  oli ) . . valmis                                 
+
+
+*** ruutu 44 ****
+|  Rivin testausta                                              
+luo  rivitesti                                                  
+   tuplaa                                                       
+   jos  alkio?                                                  
+   tosi? poista  ( oli alkio ) .                                
+   muuten                                                       
+     jos  lista?                                                
+     tosi?  ( oli lista ) .                                     
+     muuten  ( oli luku ) .                                     
+     jatka                                                      
+   jatka                                                        
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 45 ****
+|  Listan sis{ll|n testausta                                    
+                                                                
+muuttuja veljekset                                              
+( juhani tuomas aapo simeoni eero lauri timo )                  
+veljekset lle                                                   
+                                                                
+luo kuuluutesti                                                 
+   veljekset arvo                                               
+   jos " simeoni  kuuluu?                                       
+   tosi?  ( kyll{ kuului ) .                                    
+   muuten  ( ei kuulunut ) .                                    
+   jatka                                                        
+valmis                                                          
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 46 ****
+|  [lytesti??                                                   
+muuttuja pisteet                                                
+luo :k :v kysvas :k listateksti lle                             
+   jos luelista :v samat?                                       
+   tosi? ( Aivan oikein ) . pisteet + 1 = pisteet lle           
+   muuten ( Ei ole, typerys, se on )  :v per{{n .               
+   jatka                                                        
+valmis                                                          
+luo sarja uusirivi                                              
+   ( Mik{ on paras elokuva? ) ( Casablanca )                    
+   kysvas uusirivi                                              
+   ( Paljonko on  2 + 2 ? ) ( 5 ) kysvas uusirivi               
+   ( Kuka kirjoitti 7 veljest{? ) ( Aleksis Topelius )          
+   kysvas uusirivi                                              
+   " [lypisteesi . pisteet arvo .                               
+valmis                                                          
+
+
+*** ruutu 47 ****
+| Tervehdys sinulle                                             
+                                                                
+( Anna etu ja sukunimesi ) listateksti lle                      
+luo tervehdys                                                   
+   luelista alkup{{ " Terve p{{ksi .                            
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 48 ****
+| pikapuheen alustusta                                          
+                                                                
+muuttuja aloitus muuttuja lopetus 8 jono puhe                   
+                                                                
+( Toivotan kaikki tervetulleiksi ) aloitus lle                  
+                                                                
+( [{nest{k{{ minua ) lopetus lle                                
+( El{mme suurissa vaikeuksissa ) 1 puhe lle                     
+( Tulevaisuus on ep{varmaa ) 2 puhe lle                         
+( Mehua ja hillomunkkeja kaikille ) 3 puhe lle                  
+( El{kel{iset kunniaan ) 4 puhe lle                             
+( N{lk{vy|t{ on kiristett{v{ ) 5 puhe lle                       
+( Koti{ideiss{ on turvamme ) 6 puhe lle                         
+( Lapsilis{t kaksinkertaisiksi ) 7 puhe lle                     
+( Opintoraha kymmenkertaiseksi ) 8 puhe lle                     
+   ( 49 lue suorita ) tee                                       
+
+
+*** ruutu 49 ****
+| Pikapuheen tuottaminen                                        
+                                                                
+luo :pituus pikapuhe                                            
+   uusirivi                                                     
+   aloitus arvo . uusirivi                                      
+   :pituus kertaa                                               
+      8 sattuma puhe arvo . uusirivi                            
+   viel{?                                                       
+   lopetus arvo .                                               
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 50 ****
+|  Konnan siirtely{                                             
+luo peli                                                        
+   toista                                                       
+      n{pp{in tuplaa <> 27                                      
+   yh{?                                                         
+      jos  on                                                   
+         122 niin 5 eteen loppuun                               
+         110 niin 5 vasen loppuun                               
+         109 niin 5 oikea loppuun                               
+         muuten                                                 
+      loppu                                                     
+   alkuun                                                       
+valmis                                                          
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 51 ****
+| ajoradan luonti                                               
+luo :x1 :y1 :x2 :y2 reunat                                      
+   :x1 :y1 :x1 :y2 jana :x2 :y2 viiva :x2 :y1 viiva             
+   :x1 :y1 viiva                                                
+valmis                                                          
+luo :x1 :y1 :x2 :y2 ajorata                                     
+   :x1 :y1 :x2 :y2 reunat                                       
+   :x1 + 10 = :y1 + 10 = :x2 - 10 = :y2 - 10 = reunat           
+   :x1 + 5 = :y1 + 5 = paikka                                   
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 52 ****
+| satunnaista viivanpiirtoa                                     
+luo satjana                                                     
+   640 sattuma - 1 =                                            
+   190 sattuma + 10 =                                           
+  viiva                                                         
+valmis                                                          
+                                                                
+luo s{kkyr{                                                     
+   toista                                                       
+     -1                                                         
+   yh{?                                                         
+      satjana                                                   
+   alkuun                                                       
+valmis                                                          
+                                                                
+                                                                
+
+
+*** ruutu 53 ****
+| PARABELIN PIIRT{MIST{                                         
+MUUTTUJA Y                                                      
+LUO AKSELIT                                                     
+   10 100 600 100 JANA  320 10 320 190 JANA                     
+VALMIS                                                          
+LUO :X FUNKTIO -0.1 * :X * :X - 3 * :X + 10 = VALMIS            
+LUO :X PARABELI                                                 
+    JOS :X < 100 JA :X > -100 TOSI?                             
+        :X FUNKTIO                                              
+        Y LLE                                                   
+        JOS Y < 100 JA Y > -100 TOSI?                           
+            :X + 320 = Y + 100 = PISTE                          
+            :X + 1 = PARABELI                                   
+        JATKA                                                   
+    JATKA VALMIS                                                
+LUO KAYRA AKSELIT  ( ANNA ALKUPISTE! ) . LUELUKU PARABELI VALMIS
+
+
+*** ruutu 54 ****
+                                                                
+LUO KULMIO 2 KERTAA                                             
+    40 ETEEN 45 OIKEA 40 ETEEN 135 OIKEA                        
+VALMIS                                                          
+                                                                
+LUO LEHTI 2 KERTAA                                              
+    15 KERTAA 5 ETEEN 3 OIKEA VIEL{? 135 OIKEA                  
+VALMIS                                                          
+                                                                
+LUO YHDISTELM{ 6 KERTAA                                         
+    JOS I MOD 2  TOSI?                                          
+        LEHTI 60 OIKEA                                          
+    MUUTEN                                                      
+        KULMIO  60 OIKEA                                        
+    JATKA                                                       
+VALMIS                                                          
+
+
+*** ruutu 55 ****
+\                                                               
+Muuttuja kulma muuttuja funk1 muuttuja funk2 muuttuja x         
+muuttuja y muuttuja cf1 muuttuja cf2                            
+luo :cf1 :cf2 lj1 0 kulma lle :cf1 cf1 lle :cf2 cf2 lle         
+     ( cf1 * kulma = sin * 80 + 100 = y lle ) funk1 lle         
+     ( cf2 * kulma = cos * 160 + 320 = x lle ) funk2 lle        
+  funk1 arvo tee funk2 arvo tee x arvo y arvo piste             
+valmis                                                          
+luo :lis lj2                                                    
+    kulma + :lis = kulma lle                                    
+  funk1 arvo tee funk2 arvo tee x arvo y arvo                   
+  viiva :lis lj2                                                
+valmis                                                          
+luo :cf1 :cf2 :lis lissaj :cf1 :cf2 lj1 :lis lj2 valmis         
+                                                                
+                                                                
+
+
+*** ruutu 56 ****
+                                                                
+MUUTTUJA X MUUTTUJA Y  MUUTTUJA FUNK                            
+LUO :ALKU PIIRTO1                                               
+    JOS :ALKU > -320 JA :ALKU < 320 TOSI?                       
+        :ALKU X LLE ( ANNA FUNKTIO! ) LISTATEKSTI LLE           
+        LUELISTA FUNK LLE                                       
+    MUUTEN JATKA                                                
+VALMIS                                                          
+LUO :ASKEL PIIRTO2 FUNK ARVO TEE Y LLE                          
+    JOS Y > -100 JA Y < 100 TOSI?                               
+        X + 320 = Y + 100 = PISTE                               
+        X + :ASKEL = PIIRTO2                                    
+    MUUTEN JATKA                                                
+VALMIS                                                          
+                                                                
+LUO :A :B PIIRTO :A PIIRTO1 :B PIIRTO2 VALMIS                   
+
+
+*** ruutu 57 ****
+| rekursio kirjaimilla                                          
+                                                                
+luo :sana kirjainpois                                           
+    jos :sana == NIL vale?                                      
+        :sana . uusirivi                                        
+        :sana h{nt{ kirjainpois                                 
+    muuten jatka                                                
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 58 ****
+| juttelu/listoja                                               
+                                                                
+luo juttelu                                                     
+   ( Nimeni on SAMPO. Mik{ on sinun nimesi? ) . ur              
+   ( Hauska tavata sinua, ) luealkio per{{n .  ur               
+   ( Kuinka vanha olet? ) . ur                                  
+   ( On varmasti hauskaa olla ) luealkio per{{n                 
+   ( vuotta vanha, min{ en ole vuottakaan ) per{{n . ur         
+   ( Mik{ on mieliv{risi? ) . ur                                
+   ( Sep{ sattui, ) luealkio per{{n                             
+   ( on my|s minun mieliv{rini ) per{{n . ur                    
+   ( Hei sitten, oli hauska jutella ) . ur                      
+valmis                                                          
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 59 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 60 ****
+                                                                
+luo :n kertoma                                                  
+        jos :n == 0                                             
+        tosi?   * 1 =                                           
+        muuten  * :n =  :n - 1 = kertoma                        
+        jatka                                                   
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 61 ****
+                                                                
+luo :n kertoma                                                  
+        jos :n == 0                                             
+        tosi?   * 1 =                                           
+        muuten  * :n =  :n - 1 = kertoma                        
+        jatka                                                   
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 62 ****
+                                                                
+luo jatkuva                                                     
+   30 e 320 100 paikka 360 sattuma o                            
+   jatkuva                                                      
+valmis                                                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 63 ****
+                                                                
+LUO ALKU MUUTTUJA A MUUTTUJA B MUUTTUJA C                       
+( ANNA KERTOIMET JA VAKIO! ) . LUKU A LLE                       
+LUKU B LLE LUKU C LLE VALMIS LUO :X FUNKTIO A * :X * :X + B * :X
+ + C = VALMIS MUUTTUJA Y                                        
+LUO :X PARABELI                                                 
+    JOS :X < 100 JA :X > -100 TOSI?                             
+        :X FUNKTIO                                              
+        Y LLE                                                   
+        JOS Y < 100 JA Y > -100 TOSI?                           
+            :X + 320 = Y + 100 = PISTE                          
+            :X + 1 = PARABELI                                   
+        JATKA                                                   
+    JATKA VALMIS                                                
+LUO KAYRA AKSELIT ALKU ( ANNA ALKUPISTE! ) . LUKU PARABELI VALMI
+S                                                               
+
+
+*** ruutu 64 ****
+\                                                               
+Muuttuja kulma muuttuja funk1 muuttuja funk2 muuttuja x         
+muuttuja y muuttuja cf1 muuttuja cf2                            
+luo :cf1 :cf2 lj1 0 kulma lle :cf1 cf1 lle :cf2 cf2 lle         
+     ( cf1 * kulma = sin * 80 + 100 = y lle ) funk1 lle         
+     ( cf2 * kulma = cos * 160 + 320 = x lle ) funk2 lle        
+  funk1 arvo tee funk2 arvo tee x arvo y arvo piste             
+valmis                                                          
+luo :lis lj2                                                    
+    kulma + :lis = kulma lle                                    
+  funk1 arvo tee funk2 arvo tee x arvo y arvo                   
+  viiva :lis lj2                                                
+valmis                                                          
+luo :cf1 :cf2 :lis lissaj :cf1 :cf2 lj1 :lis lj2 valmis         
+                                                                
+                                                                
+
+
+*** ruutu 65 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 66 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 67 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 68 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 69 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                

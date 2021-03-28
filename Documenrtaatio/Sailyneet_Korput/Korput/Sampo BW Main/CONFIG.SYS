@@ -1,0 +1,3 @@
+device=ansi.sys
+device=ldrives.sys /c
+

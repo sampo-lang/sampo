@@ -1,0 +1,1720 @@
+
+8086 Forth 83 Model 
+Version 2.1.0 Modified 01Jun84 
+aaa 
+Scr # 1         A:UTIHP.BLK 
+  0 \ Load Screen to Bring up Standard System     >24.2.86-HPU    hp
+  1 
+  2       2 LOAD ( Utilities )
+  3       9 LOAD ( STRINGS )
+  4 \    12 LOAD ( EDITING )
+  5   22 23 THRU
+  6      28 LOAD ( DUMPING )
+  7      31 LOAD ( SEEING )
+  8      43 LOAD ( SHOWING )
+  9      49 LOAD ( BUGGING )
+ 10 \    52 LOAD ( TASKING )
+ 11 
+ 12 CR .( Standard System Loaded )
+ 13 
+ 14 
+ 15 
+
+Scr # 2         A:UTIHP.BLK 
+  0 \ Basic Utilities Load Screen                         04Apr84map
+  1 ONLY FORTH ALSO DEFINITIONS
+  2 VARIABLE FUDGE   100 FUDGE !
+  3 : MS   (S n -- )
+  4    0 ?DO   FUDGE @ 0 ?DO LOOP  LOOP  ;
+  5 : U<=   (S u1 u2 -- f )   U> NOT   ;
+  6 : U>=   (S u1 u2 -- f )   U< NOT   ;
+  7 : <=    (S n1 n2 -- f )   > NOT    ;
+  8 : >=    (S n1 n2 -- f )   < NOT    ;
+  9 : 0>=   (S n1 n2 -- f )   0< NOT   ;
+ 10 : 0<=   (S n1 n2 -- f )   0> NOT   ;
+ 11 
+ 12 VOCABULARY HIDDEN
+ 13 1 6 +THRU
+ 14 
+ 15 
+
+Scr # 3         A:UTIHP.BLK 
+  0 \ Output Formatting                                   22Feb84map
+  1 VARIABLE LMARGIN    0 LMARGIN !
+  2 VARIABLE RMARGIN   70 RMARGIN !
+  3 : ?LINE   (S n -- )
+  4    #OUT @ +  RMARGIN @ > IF  CR  LMARGIN @ SPACES  THEN   ;
+  5 : ?CR   (S -- )   0 ?LINE  ;
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 4         A:UTIHP.BLK 
+  0 \ Managing Source Screens                                     ap
+  1 : .SCR   (S -- )   ." Ruutu # " SCR ? 8 SPACES FILE? ;
+  2 : LIST   (S n -- )
+  3    1 ?ENOUGH  CR  DUP SCR !   .SCR   L/SCR 0
+  4    DO   CR  I 3 .R SPACE
+  5      DUP BLOCK  I C/L * + C/L -TRAILING >TYPE   KEY? ?LEAVE
+  6    LOOP  DROP CR ;
+  7 : TRIAD   (S n -- )
+  8    12 EMIT ( form feed ) 3 / 3 * 3 BOUNDS DO  I LIST  LOOP  ;
+  9 : .LINE0   (S n -- )
+ 10    DUP 3 MOD 0= IF CR THEN   CR DUP 3 .R SPACE
+ 11    BLOCK C/L -TRAILING >TYPE  ;
+ 12 : INDEX   (S n1 n2 -- )
+ 13    2 ?ENOUGH   1+ SWAP DO  I .LINE0   LOOP  CR ;
+ 14 : IND   (S n -- )
+ 15    BEGIN  DUP .LINE0  1+  KEY? UNTIL  DROP ;
+
+Scr # 5         A:UTIHP.BLK 
+  0 \ Display the WORDS in the Context Vocabulary         07Feb84map
+  1 : LARGEST (S addr n -- addr' val )
+  2    OVER 0 SWAP ROT 0
+  3    DO   2DUP @ U< IF   -ROT 2DROP    DUP @ OVER   THEN  2+
+  4    LOOP   DROP   ;
+  5 : WORDS   (S -- )
+  6    CR LMARGIN @ SPACES   CONTEXT @ HERE #THREADS 2* CMOVE
+  7    BEGIN   HERE #THREADS LARGEST   DUP
+  8    WHILE   DUP L>NAME DUP C@ 31 AND ?LINE
+  9      .ID SPACE SPACE   @ SWAP !   KEY? IF  EXIT  THEN
+ 10    REPEAT   2DROP   ;
+ 11 ROOT DEFINITIONS
+ 12 : WORDS    WORDS ;
+ 13 FORTH DEFINITIONS
+ 14 
+ 15 
+
+Scr # 6         A:UTIHP.BLK 
+  0 \ Iterated Interpretation                             03Apr84map
+  1 VARIABLE #TIMES   ( # times already performed )   1 #TIMES !
+  2 : TIMES   (S n -- )
+  3    1 #TIMES +!  #TIMES @
+  4    < IF  1 #TIMES !  ELSE  >IN OFF  THEN   ;
+  5 : MANY   (S -- )
+  6    KEY? NOT IF   >IN OFF   THEN   ;
+  7 \ : WHEN   (S f -- )
+  8 \    PAUSE  NOT IF   R> 4 - >R   THEN   ;
+  9 
+ 10 : ::   (S -- )
+ 11    HIDE  HERE  >R  [ ' : @ ] LITERAL ,   !CSP  ]
+ 12    R@ EXECUTE  R> DP ! ;
+ 13 
+ 14 
+ 15 
+
+Scr # 7         A:UTIHP.BLK 
+  0 \ Managing Source Screens                                     ap
+  1 : N   (S -- )      1 SCR +!  DISK-ERROR OFF  ;
+  2 : B   (S -- )     -1 SCR +!  DISK-ERROR OFF  ;
+  3 : L   (S -- )     SCR @ LIST   ;
+  4 : ESTABLISH   (S n -- )   FILE @ SWAP  1 BUFFER# 2! ;
+  5 : (COPY)   ( from to -- )
+  6    OFFSET @ + SWAP IN-BLOCK DROP  ESTABLISH UPDATE ;
+  7 : COPY   FLUSH (COPY) FLUSH ;
+  8 : @VIEW   (S code-field -- scr file# )
+  9    >VIEW @ DUP 4095 AND  DUP 0= ABORT" Luotu n{pp{imist|lt{"
+ 10    SWAP 4096 / 15 AND  ;
+ 11 : VIEW   (S -- )   [ DOS ]  ' @VIEW  ?DUP
+ 12    IF   2* VIEW-FILES + @  ." on tiedostossa: " 2DUP >BODY .FILE
+ 13      ." ruudulla " . EXECUTE OPEN-FILE
+ 14    ELSE  ." voi olla tiedostossa: " FILE? ." ruudulla "
+ 15 DUP . THEN LIST ;
+
+Scr # 8         A:UTIHP.BLK 
+  0 \ Disk copy utility                                   08APR83HHL
+  1 VARIABLE HOPPED   ( # screens copy is offset )
+  2 VARIABLE U/D
+  3 DEFER CONVEY-COPY   ' (COPY) IS CONVEY-COPY
+  4 : HOP   ( n -- ) ( specifies n screens to skip )  HOPPED ! ;
+  5 : .TO  ( #1 #2 -- #1 #2 )  CR  OVER . ." to "  DUP . ;
+  6 : (CONVEY)   (S blk n -- blk+-n )
+  7    0 ?DO   KEY? ?LEAVE   DUP DUP HOPPED @ + .TO
+  8       CONVEY-COPY   U/D @ +   LOOP   FLUSH   ;
+  9 : CONVEY   (S first last -- )
+ 10    FLUSH   HOPPED @ 0< IF   1+ OVER - 1
+ 11    ELSE   DUP 1+ ROT - -1   THEN U/D !   #BUFFERS /MOD
+ 12    >R (CONVEY) R> 0 ?DO #BUFFERS (CONVEY) LOOP   DROP   ;
+ 13 : TO   ( #1st-source #last-source -- #1st-source #last-source )
+ 14 (  #1st-dest must follow TO )
+ 15    SWAP   BL WORD  NUMBER DROP   OVER -   HOP   SWAP   ;
+
+Scr # 9         A:UTIHP.BLK 
+  0 \ String Functions   Load Screen                      07Feb84map
+  1    1 2 +THRU   CR .( Strings Loaded )   \S
+  2 The String manipulation primitives include string comparison and
+  3 searching. The string search implemented is used in the editor
+  4 to find the desired string.  The only unusual thing about it is
+  5 the presence of a variable called CAPS, which determines
+  6 whether or not to ignore the case of the subject and pattern
+  7 strings.  If case is ignored then A-Z = a-z.  The default is
+  8 ignore case.
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 10         A:UTIHP.BLK 
+  0 \ String Functions  SEARCH                            10Mar84map
+  1 VARIABLE FOUND
+  2 : SCAN-1ST   (S a n c -- a n )
+  3    CAPS @ IF  DROP  ELSE  SCAN  THEN  ;
+  4 : SEARCH   ( sadr slen badr blen -- n f )
+  5    FOUND OFF  SWAP >R   2DUP U<=
+  6    IF  OVER - 1+ 2 PICK C@  R@ -ROT >R
+  7      BEGIN  R@ SCAN-1ST DUP
+  8        IF  >R 3DUP SWAP COMPARE 0=
+  9          IF  FOUND ON  R> DROP 0 >R  THEN  R>  THEN  DUP
+ 10      WHILE   1 /STRING  REPEAT  R> 2DROP -ROT
+ 11    THEN  2DROP  R> -  FOUND @  ;
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 11         A:UTIHP.BLK 
+  0 \ String operators                                    04Apr84map
+  1 : DELETE   (S buffer size count -- )
+  2    OVER MIN >R  R@ - ( left over )  DUP 0>
+  3    IF  2DUP SWAP DUP R@ + -ROT SWAP CMOVE  THEN  + R> BLANK ;
+  4 : INSERT   (S string length buffer size -- )
+  5    ROT OVER MIN >R  R@ - ( left over )
+  6    OVER DUP R@ +  ROT CMOVE>   R> CMOVE  ;
+  7 : REPLACE   (S string length buffer size -- )  ROT MIN CMOVE ;
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 12         A:UTIHP.BLK 
+  0 \ Load Screen for the Editor                          24APR84HHL
+  1    1 15 +THRU   IBM   CR .( Editor Loaded )
+  2 ONLY FORTH ALSO DEFINITIONS \S
+  3 The Following editor is compatible with the editor described
+  4 in Starting Forth. For details on the various commands, see
+  5 the book Starting Forth by Leo Brodie. There are a few
+  6 extensions that have been implemented.  Most notably, the
+  7 word NEW which allows you to replace multiple lines.  Also,
+  8 this editor has the ability to display the screen that is being
+  9 edited continuously.  You may need to modify the cursor
+ 10 addressing commands in order to take advantage of this feature.
+ 11 You can edit without using the full screen feature simply by
+ 12 invoking the EDITOR vocabulary and entering commands as usual.
+ 13 Use the L command to see what has happened.
+ 14 
+ 15 
+
+Scr # 13         A:UTIHP.BLK 
+  0 \ Terminal Dependant deferred words                   13Apr84map
+  1 DEFER BLOT    (S col -- )
+  2 DEFER -LINE   (S -- )
+  3 : AT   (S col row -- )  ( 0 0 is upper left )
+  4    DOES>  -ROT 2DUP #LINE !  #OUT !  ROT PERFORM  ; AT
+  5 : DARK   (S -- )
+  6    DOES>  PERFORM   #LINE OFF  #OUT OFF   ; DARK
+  7 
+  8 VOCABULARY EDITOR   EDITOR ALSO DEFINITIONS
+  9 DEFER .SCREEN (S -- )
+ 10 2VARIABLE AUTO   VARIABLE EDITING?   VARIABLE CHANGED
+ 11 : INSTALL   (S -- )   EDITING? @ NOT
+ 12    IF  ['] .SCREEN AUTO @ !  ALSO  EDITING? ON  CHANGED OFF
+ 13    THEN  DISK-ERROR OFF  ;
+ 14 
+ 15 
+
+Scr # 14         A:UTIHP.BLK 
+  0 \ Move the Editor's cursor around                     16Oct83map
+  1 B/BUF CONSTANT C/SCR
+  2 : TOP          (S -- )      R# OFF ;
+  3 : C            (S n -- )    R# @ + C/SCR MOD R# ! ;
+  4 : T            (S n -- )    TOP  C/L *  C ;
+  5 : CURSOR       (S -- n )    R# @ ;
+  6 : LINE#        (S -- n )    CURSOR  C/L  /  ;
+  7 : COL#         (S -- n )    CURSOR  C/L  MOD  ;
+  8 : +T           (S n -- )    LINE# + T   ;
+  9 : 'START       (S -- adr )  SCR @ BLOCK ;
+ 10 : 'CURSOR      (S -- adr )  'START  CURSOR  + ;
+ 11 : 'LINE        (S -- adr )  'CURSOR  COL# -  ;
+ 12 : #AFTER       (S -- n )    C/L COL# -  ;
+ 13 : #REMAINING   (S -- n )    B/BUF CURSOR - ;
+ 14 : #END         (S -- n )    #REMAINING COL# +  ;
+ 15 
+
+Scr # 15         A:UTIHP.BLK 
+  0 \ buffers                                             11Mar84map
+  1 : MODIFIED   (S -- )   CHANGED ON  UPDATE ;
+  2 ASCII ^ CONSTANT EOS
+  3 : ?TEXT   (S adr -- adr+1 n )   >R   EOS PARSE DUP
+  4    IF  R@ C/L 1+ BLANK  R@ PLACE  ELSE  2DROP  THEN  R> COUNT ;
+  5 84 CONSTANT C/PAD
+  6 : 'INSERT   (S -- insert-buffer )   PAD     C/PAD + ;
+  7 : 'FIND     (S -- find-buffer )     'INSERT C/PAD + ;
+  8 : 'VIDEO    (S -- video-buffer )    'FIND   C/PAD + ;
+  9 : .FRAMED   (S adr -- )   ." '" COUNT TYPE ." '" ;
+ 10 : .BUFS     (S -- )
+ 11    CR ." I " 'INSERT .FRAMED   CR ." F " 'FIND .FRAMED ;
+ 12 : ?MISSING   (S n f -- n | )
+ 13    0= IF  DROP 'FIND .FRAMED ."  not found " QUIT THEN ;
+ 14 : KEEP   (S -- )   'LINE C/L 'INSERT  PLACE  ;
+ 15 
+
+Scr # 16         A:UTIHP.BLK 
+  0 \ buffers                                             11Mar84map
+  1 : K   (S -- )   'FIND PAD  C/PAD CMOVE
+  2    'INSERT 'FIND  C/PAD CMOVE   PAD 'INSERT  C/PAD CMOVE  ;
+  3 : W   (S -- )   SAVE-BUFFERS  ;
+  4 : 'C#A   (S -- 'cursor #after )   'CURSOR #AFTER  MODIFIED  ;
+  5 : (I)  (S -- len 'insert len 'cursor #after )
+  6    'INSERT ?TEXT  TUCK 'C#A  ;
+  7 : (TILL)  (S -- n )   'FIND ?TEXT 'C#A SEARCH ?MISSING ;
+  8 : 'F+   (S n1 -- n2 )  'FIND C@ +  ;
+  9 11 CONSTANT ID-LEN
+ 10 CREATE ID   ID-LEN ALLOT   ID ID-LEN BLANK
+ 11 : STAMP  (S -- )  ID 'START C/L + ID-LEN 1- - ID-LEN 1- CMOVE ;
+ 12 : ?STAMP   (S -- )   CHANGED @ IF  STAMP  CHANGED OFF  THEN  ;
+ 13 
+ 14 
+ 15 
+
+Scr # 17         A:UTIHP.BLK 
+  0 \ line editing                                        01Apr84map
+  1 : I   (S -- )   (I)  INSERT  C ;
+  2 : O   (S -- )   (I)  REPLACE C ;
+  3 : P   (S -- )   'INSERT ?TEXT DROP 'LINE C/L CMOVE MODIFIED ;
+  4 : U   (S -- )   C/L C 'LINE C/L OVER #END INSERT  P ;
+  5 : X   (S -- )   KEEP  'LINE #END C/L  DELETE MODIFIED ;
+  6 : SPLIT  (S -- )
+  7    PAD C/L 2DUP BLANK 'CURSOR #REMAINING INSERT MODIFIED ;
+  8 : JOIN   (S -- )   'LINE C/L + C/L  'C#A  INSERT ;
+  9 : WIPE   (S -- )   'START B/BUF BLANK  MODIFIED ;
+ 10 : M   (S -- )   TRUE ABORT" Use G !" ;
+ 11 : G   (S  screen line -- )
+ 12    C/L * SWAP IN-BLOCK +  C/L 'INSERT PLACE
+ 13    C/L NEGATE C  U  C/L C ;
+ 14 : BRING   (S screen first last -- )
+ 15    1+ SWAP DO  DUP [ FORTH ] I G  LOOP  DROP ;
+
+Scr # 18         A:UTIHP.BLK 
+  0 \ find and replace                                    10Mar84map
+  1 : FIND?  (S - n f ) 'FIND ?TEXT  'CURSOR #REMAINING  SEARCH ;
+  2 : F   (S -- )   FIND? ?MISSING   'F+ C ;
+  3 : S   (S n - )   1 ?ENOUGH   FIND?
+  4    IF  'F+ C  EXIT  THEN  DROP  FALSE OVER SCR @
+  5    DO   N TOP  'FIND COUNT 'CURSOR #REMAINING SEARCH
+  6      IF  'F+ C DROP TRUE LEAVE  ELSE  DROP  THEN
+  7      KEY? ABORT" Break!"
+  8    LOOP  ?MISSING  ;
+  9 : E   (S -- )   'FIND C@  DUP NEGATE C  'C#A ROT DELETE ;
+ 10 : D   (S -- )   F E ;
+ 11 : R   (S -- )   E I ;
+ 12 : TILL    (S -- )   'C#A (TILL)  'F+  DELETE ;
+ 13 : J       (S -- )   'C#A (TILL)  DELETE ;
+ 14 : KT      (S -- )   'CURSOR (TILL)  'F+  'INSERT PLACE  ;
+ 15 
+
+Scr # 19         A:UTIHP.BLK 
+  0 \ screen display                                      22Mar84map
+  1 3 CONSTANT DX   1 CONSTANT DY
+  2 : .LINE   (S -- )
+  3    LINE# 2 .R SPACE   'LINE COL# >TYPE   ASCII ^ EMIT
+  4    'CURSOR #AFTER >TYPE  ;
+  5 : REDISPLAY   (S line# -- )
+  6    0 OVER DY + AT DUP 2 .R SPACE
+  7    DUP C/L * 'START + C/L TYPE  SPACE .  #OUT @ BLOT ;
+  8 : CHANGED?   (S line# -- f )
+  9    C/L * DUP 'START +  SWAP 'VIDEO +  C/L  COMP ;
+ 10 : .ALL   (S -- )   DISK-ERROR @ 0=
+ 11    IF  DX 0 AT .SCR   #OUT @ BLOT [ FORTH ]   ?STAMP
+ 12       L/SCR 0 DO  I CHANGED?  IF  I REDISPLAY  THEN  LOOP
+ 13       'START 'VIDEO B/BUF CMOVE
+ 14       0 18 AT .LINE  0 19 AT -LINE  0 23 AT #OUT OFF  THEN ;
+ 15 
+
+Scr # 20         A:UTIHP.BLK 
+  0 \ screen editing                                      11Mar84map
+  1 : EDIT-AT  ( -- )  CURSOR C/L /MOD SWAP DX + SWAP DY + AT  ;
+  2 : NEW   (S n -- )
+  3    L/SCR SWAP
+  4    DO   [ FORTH ] I [ EDITOR ] T  EDIT-AT >IN OFF QUERY SPAN @
+  5      IF  P  ELSE  [ FORTH ] I REDISPLAY  LEAVE  THEN  .SCREEN
+  6    LOOP  .SCREEN  ;
+  7 : GET-ID   (S -- )
+  8    ID ID-LEN -TRAILING NIP 0=
+  9    IF   CR ." Enter your ID: "
+ 10      ID-LEN 0 DO  ASCII . EMIT  LOOP  ID-LEN BACKSPACES
+ 11      ID ID-LEN EXPECT
+ 12    THEN ;
+ 13 
+ 14 
+ 15 
+
+Scr # 21         A:UTIHP.BLK 
+  0 \ entering and exiting the editor                     23Apr84map
+  1 FORTH DEFINITIONS
+  2 : DONE   (S -- )   [ EDITOR ]   EDITING? @
+  3    IF   PREVIOUS  EDITING? OFF   CR SCR ?  >UPDATE @ 0< NOT
+  4      IF  ." Un"  THEN  ." modified"  ?STAMP W
+  5    THEN  DISK-ERROR OFF   AUTO 2@ !  ;
+  6 : ED   (S -- )   [ EDITOR ]  GET-ID  INSTALL EDITOR
+  7    'VIDEO B/BUF ERASE  DARK .ALL ;
+  8 : EDIT   (S scr -- )   1 ?ENOUGH SCR !  [ EDITOR ] TOP ED ;
+  9 : FIX   (S -- )   [ DOS ]  >IN @  ' @VIEW   ?DUP
+ 10    IF  2* VIEW-FILES + PERFORM OPEN-FILE  THEN  EDIT
+ 11    >IN !  [ EDITOR ] F  ;
+ 12 : (WHERE)   (S pos scr -- )   DISK-ERROR @ 0=
+ 13    IF  EDIT [ EDITOR ] 1- C 'WORD COUNT 'FIND PLACE  THEN  ;
+ 14 \ ' (WHERE) IS WHERE
+ 15 
+
+Scr # 22         A:UTIHP.BLK 
+  0 \ Shadow Screen Support                               02Apr84map
+  1 VOCABULARY SHADOW ALSO SHADOW DEFINITIONS
+  2 : DISPLACEMENT   (S fcb -- disp )
+  3    [ DOS ] MAXREC# @ 1+ 0 [ 8 2* ] LITERAL UM/MOD NIP  ;
+  4 : (>SHADOW)   (S scr# fcb -- scr#' )
+  5    DISPLACEMENT 2DUP < IF   +   ELSE   -   THEN  ;
+  6 : >SHADOW   (S scr# -- scr#' )
+  7    FILE @ (>SHADOW)  ;
+  8 : >IN-SHADOW   (S scr# -- scr#' )
+  9    IN-FILE @ (>SHADOW)  ;
+ 10 ONLY FORTH ALSO DEFINITIONS
+ 11 : A   (S -- )
+ 12    SCR @  [ SHADOW ] >SHADOW   SCR !  ;
+ 13 
+ 14 
+ 15 
+
+Scr # 23         A:UTIHP.BLK 
+  0 \ 8086 Assembler                                      29jan86 hp
+  1 232 CONSTANT DOES-OP
+  2 3 CONSTANT DOES-SIZE
+  3 : DOES?   (S IP -- IP' F )
+  4    DUP DOES-SIZE + SWAP C@ DOES-OP =  ;
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 24         A:UTIHP.BLK 
+  0 \ Cursor Routines for DUMB Terminals                  10Mar84map
+  1 : (AT)     (S col row -- )   2DROP  CR  ;
+  2 : (BLOT)   (S col -- )   C/L SWAP - SPACES   ;
+  3 : (DARK)   (S -- )   24 0 DO   CR   LOOP ;
+  4 : .DUMB    (S -- )   CR   .LINE   CR   ;
+  5 : DUMB      (S -- )
+  6    ['] CR  ['] STATUS >BODY  AUTO 2!
+  7    ['] .DUMB IS .SCREEN
+  8    ['] (AT)  IS AT
+  9    ['] (BLOT) IS BLOT
+ 10    ['] NOOP IS -LINE
+ 11    ['] (DARK) IS DARK  ;  DUMB
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 25         A:UTIHP.BLK 
+  0 \ Cursor Routines for IBM PC Bios                     24APR84HHL
+  1 : SMART   (S -- )
+  2    ['] CRLF  ['] CR >BODY  AUTO 2!   ['] .ALL IS .SCREEN  ;
+  3 CODE IBM-AT   (S col row -- )
+  4    AX POP  DX POP  AL DH MOV  BH BH XOR  2 # AH MOV
+  5    16 INT   NEXT   C;
+  6 CODE IBM-DARK   (S -- )
+  7    2 # AX MOV   16 INT   NEXT   C;
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 26         A:UTIHP.BLK 
+  0 \ Cursor Routines for IBM PC Bios                     24APR84HHL
+  1 : IBM-BLOT   (S col -- )   80 SWAP - SPACES   ;
+  2 CODE IBM--LINE   (S -- )
+  3    BP PUSH
+  4    BH BH XOR  3 # AH MOV  16 INT  ( Read Cursor Position )
+  5    DH CH MOV  CL CL XOR   ( Upper left corner )
+  6    24 256 * 79 + # DX MOV ( Lower right corner )
+  7    7 # BH MOV  6 256 * 1 + # AX MOV   16 INT
+  8    BP POP   NEXT   C;
+  9 
+ 10 : IBM   (S -- )   SMART
+ 11    ['] IBM-AT   IS AT
+ 12    ['] IBM-DARK IS DARK
+ 13    ['] IBM--LINE IS -LINE
+ 14    ['] IBM-BLOT IS BLOT  ;
+ 15 
+ ok
+bbb 
+Scr # 40         A:UTIHP.BLK 
+  0 \ Display category of word                            24APR84HHL
+  1 : .DEFER   (S CFA -- )
+  2    ." DEFERRED " DUP >NAME .ID   ." IS "  >IS @ (SEE)  ;
+  3 : .USER-DEFER   (S cfa -- )
+  4    ." USER DEFERRED "   DUP >NAME .ID  ." IS "  >IS @ (SEE)  ;
+  5 : .OTHER   (S CFA -- )
+  6    DUP >NAME .ID
+  7    DUP @ OVER >BODY = ( cfa points to the pfa in code words )
+  8    IF   DROP ." is Code"   EXIT   THEN
+  9    DUP @ DOES? IF  .DOES>   DROP   EXIT   THEN
+ 10    2DROP ." is Unknown"   ;
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 41         A:UTIHP.BLK 
+  0 \ Classify a word based on its CFA                    09SEP83HHL
+  1 6 ASSOCIATIVE: DEFINITION-CLASS
+  2    ( 0 )   '      QUIT @ ,   ( 1 )   '         0 @ ,
+  3    ( 2 )   '       SCR @ ,   ( 3 )   '      BASE @ ,
+  4    ( 4 )   '       KEY @ ,   ( 5 )   '      EMIT @ ,
+  5 
+  6 
+  7 
+  8 7 CASE:   .DEFINITION-CLASS
+  9    ( 0 )     .:                  ( 1 )     .CONSTANT
+ 10    ( 2 )     .VARIABLE           ( 3 )     .USER-VARIABLE
+ 11    ( 4 )     .DEFER              ( 5 )     .USER-DEFER
+ 12    ( 6 )     .OTHER      ;
+ 13 
+ 14 
+ 15 
+
+Scr # 42         A:UTIHP.BLK 
+  0 \ Top level of the Decompiler SEE                     29Sep83map
+  1 : ((SEE))   (S Cfa -- )
+  2    CR   DUP DUP @   DEFINITION-CLASS .DEFINITION-CLASS
+  3    .IMMEDIATE   ;   ' ((SEE)) IS (SEE)
+  4 
+  5 FORTH DEFINITIONS
+  6 
+  7 : SEE   (S -- )
+  8    '   (SEE)    ;
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 43         A:UTIHP.BLK 
+  0 \ Load Screen for PRINT Utility                       23Feb84map
+  1 ONLY FORTH ALSO DEFINITIONS
+  2   1 5 +THRU   CR .( Print Utility Loaded )
+  3 ONLY FORTH ALSO DEFINITIONS \S
+  4 The Print Utility allows you to print a range of screens on
+  5 your printer.  If your printer allows it, you can print 6
+  6 screens per page.  The top level word is SHOW which takes
+  7 a starting and ending screen number and prints all the
+  8 non blank screens within the range. SHOW in the EDITOR prints
+  9 the screens and their shadows.
+ 10 The print utility is initialized by INIT-PR, which defaults
+ 11 to NOOP. If you have an EPSON MX-80 set INIT-PR to EPSON.
+ 12 
+ 13 If your printer cannot print 132 columns per line, then you
+ 14   should use TRIAD instead.
+ 15 
+
+Scr # 44         A:UTIHP.BLK 
+  0 \ Variables and Setup                                 26MAY84HHL
+  1 : EPSON   (S -- )   CONTROL O EMIT ( EPSON Condensed ) ;
+  2 DEFER INIT-PR   ' NOOP IS INIT-PR
+  3 DEFER FOOTING
+  4 66 CONSTANT L/PAGE   0 CONSTANT LOGO   VARIABLE #PAGE
+  5 : PAGE   (S -- )
+  6    DOES> PERFORM   1 #PAGE +!   #LINE OFF   #OUT OFF   ; PAGE
+  7 : FORM-FEED   (S -- )  CONTROL M EMIT   CONTROL L EMIT  ;
+  8 : (PAGE)   (S -- )  L/PAGE #LINE @ OVER MIN ?DO  CR  LOOP  ;
+  9 ' (PAGE) IS PAGE
+ 10 : (SEMIT)   (S c -- )
+ 11    PRINTING @ IF   (PRINT)  ELSE  (CONSOLE)  THEN  ;
+ 12 
+ 13 HIDDEN DEFINITIONS
+ 14 CREATE SCR#S   14 ALLOT   (   enough room for 6 Screens )
+ 15 
+
+Scr # 45         A:UTIHP.BLK 
+  0 \ Print 2 screens across on a page                    10Apr84map
+  1 : TEXT?   (S Scr# -- f )
+  2    BLOCK  DUP C@  BL ASCII ~ BETWEEN     ( printable )
+  3    IF    B/BUF -TRAILING   NIP  0<>  ( and not empty )
+  4    ELSE   FALSE   THEN ;
+  5 : PR   (S scr -- )
+  6    DUP CAPACITY >= IF  DROP LOGO  THEN
+  7    1 SCR#S +!  SCR#S DUP @ 2* + !  ;
+  8 : 2PR   (S Scr1# Scr2# line# -- )
+  9    CR DUP 2 .R SPACE  C/L * >R
+ 10    PAD 129 BLANK  SWAP BLOCK R@ +  PAD C/L CMOVE
+ 11    BLOCK R> + PAD C/L + 1+ C/L CMOVE  PAD 129 -TRAILING TYPE ;
+ 12 : 2SCR   (S Scr1 Scr2 --- )
+ 13    CR CR   4 SPACES   OVER 4 .R   61 SPACES   DUP 4 .R
+ 14    16 0 DO   2DUP I 2PR   LOOP   2DROP   ;
+ 15 
+
+Scr # 46         A:UTIHP.BLK 
+  0 \ Prints 6 screen on a page                           07Mar84map
+  1 : P-HEADING   (S -- )
+  2    CR CR  5 SPACES  ." Page# "  #PAGE ? 8 SPACES  FILE? CR  ;
+  3 : P-FOOTING   (S -- )
+  4    CR CR 58 SPACES  ." Forth 83 Model"    PAGE ;
+  5 ' P-FOOTING IS FOOTING
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 47         A:UTIHP.BLK 
+  0 \ Prints 6 screen on a page                           11Apr84map
+  1 : PR-START  (S -- )   PRINTING ON   #LINE OFF
+  2    ['] (SEMIT) IS EMIT   SCR#S OFF  1 #PAGE !  INIT-PR  ;
+  3 : PR-STOP     (S -- )
+  4    ['] (EMIT) IS EMIT  PRINTING OFF  ;
+  5 : PR-PAGE   (S -- )
+  6    P-HEADING  SCR#S OFF   SCR#S 2+  3 0
+  7    DO  DUP @ OVER 6 + @ 2SCR  2+  LOOP  DROP  FOOTING  ;
+  8 : PR-S-PAGE   (S -- )
+  9    P-HEADING  SCR#S OFF   SCR#S 2+  3 0
+ 10    DO  DUP @ OVER 2+ @ 2SCR  4 +  LOOP  DROP  FOOTING  ;
+ 11 : PR-FLUSH    (S -- f )
+ 12    SCR#S @   DUP    ( Any screens left over? )
+ 13    IF  BEGIN  SCR#S @ 5 < WHILE  0 PR  REPEAT  LOGO PR
+ 14    THEN   0<>   ;
+ 15 
+
+Scr # 48         A:UTIHP.BLK 
+  0 \ Print Page with Shadows                             03Apr84map
+  1 FORTH DEFINITIONS
+  2 : SHOW   (S first last -- )
+  3    [ HIDDEN ]   PR-START  1+ SWAP
+  4    ?DO  I TEXT? IF  I PR  THEN
+  5      SCR#S @ 6 = IF  PR-PAGE  THEN
+  6    LOOP  PR-FLUSH  IF  PR-PAGE  THEN   PR-STOP ;
+  7 SHADOW DEFINITIONS
+  8 : SHOW   (S first last -- )
+  9    [ HIDDEN ALSO ]   PR-START  1+ SWAP
+ 10    ?DO  I TEXT? IF  I PR  I [ SHADOW ] >SHADOW PR  THEN
+ 11      SCR#S @ 6 = IF  PR-S-PAGE  THEN
+ 12    LOOP  PR-FLUSH  IF  PR-S-PAGE  THEN  PR-STOP ;
+ 13 ONLY FORTH ALSO DEFINITIONS
+ 14 : LISTING   (S -- )
+ 15    0 CAPACITY 2/ 1- [ SHADOW ] SHOW  ;
+
+Scr # 49         A:UTIHP.BLK 
+  0 \ Load Screen for Debugger Utility                    07Feb84map
+  1 ONLY FORTH ALSO DEFINITIONS
+  2    1 2 +THRU   CR .( Debugger Hi Level Loaded )
+  3 ONLY FORTH ALSO DEFINITIONS   \S
+  4 The debugger is designed to let the user single step the
+  5 execution of a high level definition.  To invoke the
+  6 debugger, type DEBUG XXX where XXX is the name of the
+  7 word you wish to trace.  When XXX executes, you will get
+  8 a single step trace showing you the word within XXX that
+  9 is about to execute, and the contents of the parameter
+ 10 stack.  If you wish to poke around, type F and you can
+ 11 interpret Forth commands until you type RESUME, and execution
+ 12 of XXX will continue where it left off.  This debugger works
+ 13 by patching the NEXT routine, so it is highly machine and
+ 14 implementation dependent.  The same idea should work
+ 15 however on any Forth system with a centralized NEXT routine.
+
+Scr # 50         A:UTIHP.BLK 
+  0 \ Print a High Level Trace                            08JAN84MAP
+  1 BUG ALSO DEFINITIONS
+  2 : L.ID   (S nfa len -- )
+  3    SWAP DUP .ID  DUP NAME> 1-   - + SPACES  ;
+  4 VARIABLE SLOW
+  5 VARIABLE RES
+  6 : (DEBUG)       (S low-adr hi-adr -- )
+  7    1 CNT !   IP> !   <IP !   PNEXT   ;
+  8 : 'UNNEST   (S Pfa -- Pfa' )
+  9    BEGIN   1+ DUP @ ['] UNNEST = UNTIL   ;
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 51         A:UTIHP.BLK 
+  0 \ Enter and Leave the Debugger                        06Oct83map
+  1 : TRACE   (S Ip - )
+  2    >R .S R>  CR @ >NAME 10 L.ID   SLOW @ NOT KEY? OR
+  3    IF   SLOW OFF  RES OFF   ."   --> "   KEY UPC
+  4     ASCII C OVER = IF  SLOW @ NOT SLOW ! THEN
+  5     ASCII F OVER = IF DROP BEGIN QUERY RUN RES @ UNTIL THEN
+  6     ASCII Q OVER = ABORT" Unbug"
+  7     DROP THEN   PNEXT   ;
+  8 ' TRACE  'DEBUG !
+  9 FORTH DEFINITIONS
+ 10 : DEBUG   (S -- )
+ 11    ' 2-   DUP [ BUG ] 'UNNEST (DEBUG)   ;
+ 12 : RESUME   (S -- )
+ 13    [ BUG ]  RES ON  0  PNEXT   ;
+ 14 ONLY FORTH ALSO DEFINITIONS
+ 15 
+
+Scr # 52         A:UTIHP.BLK 
+  0 \ Load Screen for the MultiTasker                     07Feb84map
+  1 ONLY FORTH ALSO DEFINITIONS
+  2    1 2 +THRU   CR .( MultiTasker Hi Level Loaded )
+  3 ONLY FORTH ALSO DEFINITIONS   \S
+  4 The MultiTasker is loaded as an application on top of the
+  5 regular Forth System.  There is support for it in the nucleus
+  6 in the form of USER variables and PAUSEs inserted inside of
+  7 KEY EMIT and BLOCK.  The Forth multitasking scheme is
+  8 co-operative instead of interruptive.  All IO operations cause
+  9 a PAUSE to occur, and the multitasking loop looks around at
+ 10 all of the current tasks for something to do.
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 53         A:UTIHP.BLK 
+  0 \ Activate a Task                                     17Oct83map
+  1 : TASK:   (S size -- )
+  2    CREATE   TOS HERE #USER @ CMOVE   ( Copy the USER Area )
+  3    @LINK  UP @ -ROT  HERE UP !  !LINK ( I point where he did)
+  4    DUP HERE +   DUP RP0 !   100 - SP0 !  SWAP UP !
+  5    HERE ENTRY LOCAL !LINK    ( He points to me)
+  6    HERE #USER @ +  HERE DP LOCAL !
+  7    HERE SLEEP   ALLOT   ;
+  8 : SET-TASK   (S ip task -- )
+  9    DUP SP0 LOCAL @   ( Top of Stack )
+ 10    2- ROT OVER ! ( Initial IP )
+ 11    2- OVER RP0 LOCAL @ OVER !   ( Initial RP )
+ 12    SWAP TOS LOCAL !  ;
+ 13 : ACTIVATE   (S task -- )
+ 14    R> OVER SET-TASK   WAKE  ;
+ 15 
+
+Scr # 54         A:UTIHP.BLK 
+  0 \ Create a Background Task                            10Mar84map
+  1 : BACKGROUND:   (S -- )
+  2    400 TASK:   HERE @LINK 2- ( get address of new task )
+  3    SET-TASK  !CSP  ]  ;
+  4 \S
+  5  background: spooler     1 capacity show  stop ;
+  6 
+  7  : spool-this   spooler activate  3 15 [ shadow ] show stop  ;
+  8 
+  9  variable counts
+ 10  background: counter   begin pause 1 counts +! again  ;
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 55         A:UTIHP.BLK 
+  0 \                   The Rest is Silence               04Apr84map
+  1 Don't be fooled by the screen on the left.  There is more to
+  2 come.  This is the LOGO screen which will be printed in your
+  3 listings as the very last screen, if space permits.
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 56         A:UTIHP.BLK 
+  0 ( Load Screen to Bring up Standard System             03Apr84map
+  1 )
+  2 
+  3 STRINGS   Character manipulation and case conversions
+  4 EDITING   The Starting Forth Editor, adapted to split screen
+  5 DUMPING   Formatted Hex dump of memory
+  6 SEEING    A decompiler utility
+  7 SHOWING   A print utility for screens with/without shadows
+  8 BUGGING      The High Level Trace Utility
+  9 TASKING is a simple MultiTasker, believe it or not.
+ 10 
+ 11 These are the machine independant utilities that are loaded
+ 12 when you want to bring up a standard system.  There are no
+ 13 machine dependancies in this file.  Even the decompiler is
+ 14 written in a machine independant manner.  You may need to add
+ 15 some code to the CPUxx.BLK file to make this possible.
+
+Scr # 57         A:UTIHP.BLK 
+  0 \ Basic Utilities Load Screen                         03Apr84map
+  1 Set FUDGE to adjust period of MS.
+  2 MS delays about n MilliSeconds.
+  3   This clearly depends on your system clock speed.
+  4   Adjust FUDGE until the delay is right.
+  5 U<=   Unsigned less than or equal.
+  6 U>=   Unsigned greater than or equal.
+  7 <=    Less than or equal.
+  8 >=    Greater than or equal.
+  9 0<=   Less than or equal to zero.
+ 10 0>=   Greater than or equal to zero.
+ 11 
+ 12 HIDDEN is a vocabulary for internal routines to avoid cluttering
+ 13   up FORTH with all manner of junk.
+ 14   Used by the decompiler and print utilities.
+ 15 
+
+Scr # 58         A:UTIHP.BLK 
+  0 \ Output Formatting                                   03Apr84map
+  1 LMARGIN is the column number of the left margin.
+  2 RMARGIN is the column number of the right margin.
+  3 ?LINE   Move to left margin on next line if we will be past the
+  4   right margin after printing n characters.
+  5 ?CR   Move to left margin on next line if we are past the
+  6   right margin.
+  7 
+  8 These words are useful for a variety of output formatting
+  9 needs. Only WORDS uses the margins currently.
+ 10 See chapter 12 of Starting Forth for more ideas.
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 59         A:UTIHP.BLK 
+  0 \ LIST INDEX                                          22Mar84map
+  1 .SCR   (S -- )   Print current screen number and file name.
+  2 LIST   (S n -- )
+  3    List the specified screen as 16 lines with 64 characters
+  4    each.  Pressing a key aborts the listing.  LIST also makes
+  5    the specified screen the current screen.
+  6 TRIAD   (S n -- )
+  7    Lists three screens per page. For 80 column printers.
+  8 .LINE0   (S n -- ) print line 0 of block n.
+  9 INDEX   (S n1 n2 -- )
+ 10    Lists the first line of every screen, from n1 through n2.
+ 11    This is very useful for getting a quick idea of what is in
+ 12    a file if you use the first line of every screen as a global
+ 13    screen comment.
+ 14 IND   (S n -- )   is a single argument INDEX.
+ 15 Use INDEX for background printing.
+
+Scr # 60         A:UTIHP.BLK 
+  0 \ Display the WORDS in the Context Vocabulary         03Apr84map
+  1 LARGEST (S addr n -- addr' val )
+  2    Given a address and a number of words to examine, return
+  3    the address and the value of the largest entry in the
+  4    array.
+  5 WORDS   (S -- )
+  6    List the words in the context vocabulary.  This can be
+  7    interrupted any time by pressing any key.
+  8 
+  9 
+ 10 
+ 11 
+ 12 Add WORDS to ROOT.
+ 13 
+ 14 
+ 15 
+
+Scr # 61         A:UTIHP.BLK 
+  0 \ Iterated Interpretation                             03Apr84map
+  1 #TIMES   A variable that keeps track of how many times.
+  2 TIMES   ( n -- )
+  3    Re-execute the input stream a specified number of times.
+  4 
+  5 MANY   (S -- )
+  6    Re-execute the input stream until the user presses a key.
+  7 \ WHEN   (S f -- )
+  8 \  Re-execute the previous word until it returns true.
+  9 \  NOTE: WHEN is slightly magic.
+ 10 \  Usage:   : TEST   READY WHEN    BEEP  ;
+ 11 \      Where READY returns a flag.
+ 12 ::   compile and execute nameless FORTH code, then forget it.
+ 13 
+ 14 
+ 15 
+
+Scr # 62         A:UTIHP.BLK 
+  0 \ Managing Source Screens                             07Apr84map
+  1 N      Make the Next screen the current one.
+  2 B      Make the previous (Before) screen the current one.
+  3 L      List the current screen.
+  4 ESTABLISH
+  5    Sets the block number of the most recently referenced block.
+  6 (COPY)   The primitive that copies one screen to another.
+  7 COPY     Copies and screen and flushes it to disk.
+  8 @VIEW  pick up the given view-field and partition it into
+  9   screen number and file number. File number indexes VIEW-FILES.
+ 10 VIEW <name>  will display the name of the file and number of the
+ 11   screen containing the source code for <name>. The file will be
+ 12   opened if possible and the screen listed.
+ 13 
+ 14 
+ 15 
+
+Scr # 63         A:UTIHP.BLK 
+  0 \ Disk copy utility                                   23MAY83HHL
+  1 HOPPED    The number of screens to skip when copying
+  2 U/D       the direction of the copy, to prevent overlap.
+  3 CONVEY-COPY deferred so that it can be used in different context
+  4 HOP       Specifies the number of screens to hop over.
+  5 .TO       Prints a message to keep the user happy.
+  6 (CONVEY)   (S blk n -- blk+-n )
+  7    Moves a set of screens in the direction of the copy.
+  8 
+  9 CONVEY   (S first last -- )
+ 10    Moves a set of screens by first determining the direction
+ 11    to prevent overlap, and then moving them as a set whose
+ 12    size is determined by the number of available buffers.
+ 13 TO   ( #1st-source #last-source -- #1st-source #last-source )
+ 14    You can use TO instead of HOP if you know the destination
+ 15    screen number instead of the number of screens to skip.
+
+Scr # 64         A:UTIHP.BLK 
+  0 
+  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 65         A:UTIHP.BLK 
+  0 \ String Functions   Case Conversions                 10Mar84map
+  1 FOUND   A local variable to make life easier.
+  2 SCAN-1ST   SCAN for first character of a string if ignoring case
+  3  otherwise do nothing. This makes SEARCH much faster when case
+  4  is significant.
+  5 SEARCH   ( sadr slen badr blen -- n f )
+  6    Search for the s string inside of the b string.  If found
+  7    f is true and n is the offset from the beginning of the
+  8    string to where the pattern was found.  If not found, f is
+  9    false and n is meaningless.
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 66         A:UTIHP.BLK 
+  0 \ String operators                                    10Mar84map
+  1  The following parameters are input to the string operators:
+  2 sa  string-address      sl  string-length
+  3 ba  buffer-address      bl  buffer-length
+  4 ba bl sl DELETE      deletes sl characters from the start of
+  5   the buffer, filling the end with spaces.
+  6 sa sl ba bl INSERT   inserts the minimum of sl or bl characters
+  7   into ba from sa.
+  8 sa sl ba bl REPLACE    overwrites the minimum of sl or bl
+  9   characters onto ba from sa.
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 67         A:UTIHP.BLK 
+  0 Editor                                                06Oct83map
+  1   Defaults to DUMB terminal.
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 68         A:UTIHP.BLK 
+  0 \ Terminal Dependant deferred words                   04Apr84map
+  1 BLOT    Delete the rest of the current line.  n is the x pos.
+  2 -LINE   Delete the current line, causing the rest to scroll up.
+  3 AT      Position the cursor at the given x and y co-ordinate
+  4 DARK    Clear the screen and home the cursor.  Do not be
+  5   deceived, DARK is indeed a DEFERed word, and can be redirected
+  6 
+  7 EDITOR   The vocabulary for the editor words.
+  8 .SCREEN Display the entire screen, or whatever makes sense.
+  9 AUTO will contain the address of the vector to patch:
+ 10   CR for CRTs and STATUS for TTYs.
+ 11 CHANGED indicates whether the screen being edited has been.
+ 12 EDITING?  is a flag which indicates whether you are editing.
+ 13 INSTALL turns on scrolling.
+ 14 
+ 15 
+
+Scr # 69         A:UTIHP.BLK 
+  0 \ Move the Editor's cursor around                     16Oct83map
+  1 C/SCR  may not be B/BUF on some machines.
+  2 TOP      Go to the TOP of the screen
+  3 C        Move n characters, right or left.
+  4 T        Go to beginning of line n.
+  5 CURSOR   Return the current cursor position.
+  6 LINE#    The current line number.
+  7 COL#     The current column number.
+  8 +T       Go the beginning of line relative to current line.
+  9 'START   The memory address of the start of the screen
+ 10 'CURSOR  The memory address of the current position.
+ 11 'LINE    The memory address of the beginning of current line.
+ 12 #AFTER   Number of character behind cursor on current line.
+ 13 #REMAINING  Number of characters behind cursor on screen.
+ 14 #END     Number of characters between line start & screen end.
+ 15 
+
+Scr # 70         A:UTIHP.BLK 
+  0 \ buffers                                             11Mar84map
+  1 MODIFIED marks the screen as changed, and sets the update flag.
+  2 EOS is the character used to denote end of string on input. It
+  3   allows multiple commands per line. Default is ^.
+  4 ?TEXT will accept a string to an address, if any input exists.
+  5 C/PAD  characters/pad.  Standard requires 84 minimum.
+  6 'INSERT, 'FIND, and 'VIDEO are the text buffers. They float
+  7   above PAD, so their contents change when HERE moves.
+  8   The alternative is to permanently allocate space for them,
+  9   which is rather wasteful.
+ 10 .BUFS  displays the contents of the insert and find buffers.
+ 11 
+ 12 ?MISSING aborts if flag is false.
+ 13 
+ 14 KEEP places the current line in the insert buffer.
+ 15 
+
+Scr # 71         A:UTIHP.BLK 
+  0 \ buffers                                             11Mar84map
+  1 K exchanges the contents of the insert and find buffers.
+  2 
+  3 W  is a terse way to ensure that all changes are written to disk
+  4 'C#A  is used often.
+  5 (I)  leaves buffer data for insert or overwrite.
+  6 
+  7 (TILL)  leaves distance to delimiter string.
+  8 'F+ adds the length of the found string.
+  9 ID-LEN is the length of the id buffer.
+ 10 ID contains the user name and date stamp.
+ 11 STAMP  places the id into the upper right hand corner of the
+ 12   screen.
+ 13 ?STAMP  update id if screen has changed, and clear flag.
+ 14 
+ 15 
+
+Scr # 72         A:UTIHP.BLK 
+  0 \ line editing                                        17Mar83map
+  1 <text> represents the text following the command. If <text> is
+  2   null, the contents of the insert buffer are used.
+  3 I <text> inserts text on the current line at the cursor.
+  4 O <text> overwrites text on the current line.
+  5 P <text> replaces the current line with <text> and blanks.
+  6 U <text> inserts a line under the current line.
+  7 X  deletes the current line and puts it into the insert buffer.
+  8 SPLIT breaks the current line in two at the cursor.
+  9 JOIN puts a copy of the next line after the cursor.
+ 10 WIPE clears the screen to blanks.
+ 11 M has been neutralized. It moved a copy of the current line to
+ 12   some other screen. The editor should not affect other screens.
+ 13 G gets a line from another screen, and inserts it in front of
+ 14   the current line.
+ 15 BRING gets several lines.
+
+Scr # 73         A:UTIHP.BLK 
+  0 \ find and replace                                    10Mar84map
+  1 <text> represents the text following the command. If <text> is
+  2   null, the contents of the find buffer are used.
+  3 F <text>  finds the text and leaves the cursor just past it.
+  4 n S <text> searches for the text thru all screens from the
+  5   current up to n. Each time a match is found, n remains on the
+  6   stack until screen n is reached.
+  7 E erases the text just found with F or S.
+  8 D <text> finds and deletes the text.
+  9 R <itext> replaces the text just found with <itext> or with the
+ 10   insert buffer.
+ 11 TILL <text>  deletes all text on the line from the cursor up to
+ 12   and including <text>.
+ 13 J <text>  deletes up to, but not including, <text>. 'Justify'
+ 14 KT <text> puts all text between the cursor and <text> inclusive
+ 15   into the insert buffer. 'Keep-Till'
+
+Scr # 74         A:UTIHP.BLK 
+  0 \ screen display                                      11Mar84map
+  1   Provided that your terminal supports the four routines AT,
+  2 DARK, BLOT, and -LINE, this code will give a continuous display
+  3 of the screen being edited. The display is updated automatically
+  4 as each command line finishes ( just before 'OK' is typed ).
+  5 DX and DY are offsets which allow room for screen number and
+  6   line numbers.
+  7 .LINE displays the current line, with the cursor shown as an
+  8   up-arrow or caret.
+  9 n REDISPLAY updates the image of line n.
+ 10 n CHANGED? indicates whether line n has changed since last
+ 11   displayed. It is sensitive to case changes.
+ 12 .ALL redisplays all lines which have changed, the screen
+ 13   number, the cursor line, and scrolls the command region.
+ 14 ***NOTE*** Assumes 24 line 80 column display.
+ 15 
+
+Scr # 75         A:UTIHP.BLK 
+  0 \ screen editing                                      10Mar84map
+  1 EDIT-AT displays the terminal's cursor at the editor's cursor.
+  2 n NEW moves the terminal's cursor to the start of line n,
+  3   and overwrites lines until a line is begun with null input
+  4   ( a Carraige Return).
+  5 GET-ID checks ID, and if it is empty, prompts for the user's
+  6   id and date.
+  7 
+  8 ***NOTE***
+  9 If you are fortunate enough to have a CompuPro or similar
+ 10 system with a clock, you can have the editor id supplied
+ 11 automatically on boot.  You will love it!
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 76         A:UTIHP.BLK 
+  0 \ entering and exiting the editor                     04Apr84map
+  1 DONE   If editing, exits the editor, updates the id stamp,
+  2   tells you if the screen was modified, and writes the screen to
+  3   disk. Always clears errors and removes automatic re-display.
+  4 ED  re-enters the editor. It clears and re-initializes the
+  5   display, and begins automatic re-display of the screen.
+  6 n EDIT sets SCR to n, then uses ED to start editing.
+  7 FIX <name>  VIEWs the source screen for <name> and enters the
+  8   editor.
+  9 (WHERE) uses EDIT to display the screen where an error occurred
+ 10   while loading.
+ 11 WHERE is an execution vector used by ABORT" to locate errors.
+ 12 Setting WHERE to (WHERE) will cause errors to invoke the editor,
+ 13 with the cursor pointing just after the offending word, which
+ 14 will be in the find buffer, ready to be replaced.
+ 15 
+
+Scr # 77         A:UTIHP.BLK 
+  0 \ Shadow Screen Support                               02Apr84map
+  1 
+  2 DISPLACEMENT  offset from a screen to its shadow.
+  3 
+  4 (>SHADOW)  convert screen number in given file to or from
+  5   its shadow.
+  6 >SHADOW  convert a screen number in FILE to or from its shadow.
+  7 
+  8 >IN-SHADOW  convert a screen number in IN-FILE to or from its
+  9   shadow.
+ 10 
+ 11 A  toggle between a screen and its shadow. ( Alternate )
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 78         A:UTIHP.BLK 
+  0 \ Shadow Screen Editing                               13Apr84map
+  1 
+  2 COPY  copy a screen and its shadow.
+  3 
+  4 CONVEY  copy a range of screens and their shadows.
+  5 
+  6 
+  7 G  Get a line and its shadow.
+  8 
+  9 BRING  Get a range of lines and their shadows.
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 79         A:UTIHP.BLK 
+  0 \ Terminal dependent routines                         04Apr84map
+  1 
+  2   These were kept few in number to ease the task of adapting
+  3 the editor to new terminals.  If your terminal is different,
+  4 replace this screen.  Routines for several common terminals
+  5 are included following the editor.
+  6   The only terminal dependent words are:
+  7 col row AT      direct cursor positioning
+  8 DARK    clear screen and home cursor
+  9 col BLOT    clear to end of line ( from column n )
+ 10 -LINE    delete the current line, causing those below to scroll
+ 11   upwards.
+ 12 
+ 13 DUMB selects the dumb terminal mode.
+ 14 
+ 15 
+
+Scr # 80         A:UTIHP.BLK 
+  0 \ Terminal dependent routines                         04Apr84map
+  1 
+  2   These were kept few in number to ease the task of adapting
+  3 the editor to new terminals.  If your terminal is different,
+  4 replace this screen.  Routines for several common terminals
+  5 are included following the editor.
+  6   The only terminal dependent words are:
+  7 col row AT      direct cursor positioning
+  8 DARK    clear screen and home cursor
+  9 col BLOT    clear to end of line ( from column n )
+ 10 -LINE    delete the current line, causing those below to scroll
+ 11   upwards.
+ 12 
+ 13 SMART is common to all smart terminals.
+ 14 ANSI selects the ANSI standard terminal drivers.
+ 15 
+
+Scr # 81         A:UTIHP.BLK 
+  0 \ Terminal dependent routines                         04Apr84map
+  1 
+  2   These were kept few in number to ease the task of adapting
+  3 the editor to new terminals.  If your terminal is different,
+  4 replace this screen.  Routines for several common terminals
+  5 are included following the editor.
+  6   The only terminal dependent words are:
+  7 col row AT      direct cursor positioning
+  8 DARK    clear screen and home cursor
+  9 col BLOT    clear to end of line ( from column n )
+ 10 -LINE    delete the current line, causing those below to scroll
+ 11   upwards.
+ 12 
+ 13 HEATH selects the H-19 or Z-19 terminal drivers.
+ 14 
+ 15 
+
+Scr # 82         A:UTIHP.BLK 
+  0 \ Terminal dependent routines                         04Apr84map
+  1 
+  2   These were kept few in number to ease the task of adapting
+  3 the editor to new terminals.  If your terminal is different,
+  4 replace this screen.  Routines for several common terminals
+  5 are included following the editor.
+  6   The only terminal dependent words are:
+  7 col row AT      direct cursor positioning
+  8 DARK    clear screen and home cursor
+  9 col BLOT    clear to end of line ( from column n )
+ 10 -LINE    delete the current line, causing those below to scroll
+ 11   upwards.
+ 12 
+ 13 TELEVIDEO selects the TVI-912 terminal drivers.
+ 14 QUME 102 and FALCO ?? are the same as the TVI.
+ 15 
+
+Scr # 83         A:UTIHP.BLK 
+  0 
+  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 84         A:UTIHP.BLK 
+  0 \ General Dump Utility - Output                       06Oct83map
+  1 .2    Display a 2 digit number followed by a space.
+  2 D.2   Display a line of 2 digit numbers.
+  3 EMIT.  Emit the character if it is displayable.
+  4   Otherwise display it as a period.
+  5 DLN   (S addr --- )
+  6    Dump 16 bytes worth of data starting at the specified
+  7    address.  First the address is displayed, then 2 sets of
+  8    8 bytes, followed by the Ascii equivalent.
+  9 ?.N   If the two numbers match, display a downwards pointer,
+ 10    otherwise display the number.
+ 11 ?.A   If the two numbers match, display a downwards pointer,
+ 12    otherwise display the number.
+ 13 
+ 14 
+ 15 
+
+Scr # 85         A:UTIHP.BLK 
+  0 \ Dump and Fill Memory Utility                        23JUN83HHL
+  1 .HEAD   (S -- )
+  2    Display the header field of a dump, making it easy to
+  3    index into the data portion of the display.
+  4 
+  5 
+  6 DUMP   (S addr len -- )
+  7    Dump memory in the range specified.  The dump is always in
+  8    hex, but the current base is unaltered.
+  9 DU   (S addr -- addr+64 )
+ 10    Dump 64 bytes at the specified address, and increment it.
+ 11 DL   (S line# -- )
+ 12    Dump the specified line number on the current screen.
+ 13 
+ 14 
+ 15 
+
+Scr # 86         A:UTIHP.BLK 
+  0 
+  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 87         A:UTIHP.BLK 
+  0 \ Positional case defining word                       23JUN83HHL
+  1 
+  2 OUT   ( # apf -- ) ( report out of range error )
+  3    Display an error message if the index is out of range
+  4    as pointed to by the parameter field.
+  5 MAP  ( # apf -- a ) ( convert subscript # to address a )
+  6    Map a subscript and a pfa into an actual address.
+  7 
+  8 CASE:   (S n --  ) ( define positional case defining word )
+  9    A positional case statement.  The number of cases is
+ 10    specified for error checking.  At runtime, the nth word
+ 11    is executed, depending upon the value on the stack.
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 88         A:UTIHP.BLK 
+  0 \ ASSOCIATIVE:                Table Lookup Def. Word  23JUN83HHL
+  1 
+  2 ASSOCIATIVE:
+  3    An associative memory word.  It must be followed by a set
+  4    of values to be looked up.
+  5    At Runtime, the values stored in the parameter field are
+  6    searched for a match.  If one if found, the index to that
+  7    value is returned.  If no match is made, then the number
+  8    of entries, ie max index + 1 is returned.  This is the
+  9    inverse of an array.
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 89         A:UTIHP.BLK 
+  0 \ Decompile each type of word                         29Sep83map
+  1 (SEE)   Forward reference to decompile deferred words
+  2 The following are used only by the decompiler:
+  3 .WORD       (S IP -- IP' )
+  4    Display the name of a word, and bump the simulated IP by 2.
+  5 .INLINE     (S IP -- IP' )
+  6    Display a word that contains an inline literal value.
+  7 .BRANCH     (S IP -- IP' )
+  8    Dispaly a word that contains an inline branch.
+  9 .QUOTE      (S IP -- IP' )
+ 10    Handles the special case of COMPILE xxx.
+ 11 .STRING     (S IP -- IP' )
+ 12    Displays a word with an inline string arguement.
+ 13 
+ 14 
+ 15 
+
+Scr # 90         A:UTIHP.BLK 
+  0 \ Decompile each type of word                         23JUN83HHL
+  1 DOES?   (S IP -- IP' F )
+  2    Increments simulated IP and returns true if call dodoes there
+  3 .(;CODE)    (S IP -- IP' )
+  4    Perhaps continue to decompile a defining word.
+  5 .FINISH     (S IP -- IP' )
+  6    Display current word and quit.
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 91         A:UTIHP.BLK 
+  0 \ Classify each word in a definition                  15Mar83map
+  1 EXECUTION-CLASS
+  2    This table lists all of the special cases that must be
+  3    decompiled differently from ordinary Forth words like DUP
+  4    and + etc.  At runtime, if the simulated IP points to a
+  5    word in this group, the corresponding index from this
+  6    table will be returned, and placed upon the stack.  If
+  7    there is no match, then the last index + 1 is returned.
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 92         A:UTIHP.BLK 
+  0 \ Classify each word in a definition                  23JUN83HHL
+  1 .EXECUTION-CLASS
+  2    This giant case statement handles the special case
+  3    decompiling needed.  Each entry corresponds to an
+  4    entry in the previous EXECUTION-CLASS associative
+  5    table.  The function of each of these words is to
+  6    decompile the current word that the simulated IP is
+  7    pointing to, and advance the simulated IP accordingly.
+  8    If no match in the table, .WORD is used.
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 93         A:UTIHP.BLK 
+  0 \ Decompile a : definition                            23JUN83HHL
+  1 .PFA   (S CFA -- )
+  2    This decompiles a parameter field which contains a list of
+  3    code fields, as is found in : definitions.
+  4 
+  5 .IMMEDIATE   (S CFA -- )
+  6    This indicates whether the current word is Immediate or not.
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 94         A:UTIHP.BLK 
+  0 \ Display category of word                            09SEP83HHL
+  1 .CONSTANT    (S CFA -- )
+  2    Decompile a Constant, and prints its value.
+  3 .VARIABLE    (S CFA -- )
+  4    Decompile a Variable, giving its location and value.
+  5 
+  6 .:           (S CFA -- )
+  7    Decompile a high level : definition.
+  8 .DOES>       (S CFA -- )
+  9    Decompile a word defined by a CREATE DOES> word.
+ 10 .USER-VARIABLE   (S CFA -- )
+ 11    Decompile a USER variable, giving the offset from the
+ 12    base of the user area and the current value.
+ 13 
+ 14 
+ 15 
+
+Scr # 95         A:UTIHP.BLK 
+  0 \ Display category of word                            29Sep83map
+  1 .DEFER  Tell the user that this is a deferred word and
+  2    decompile its current definition.
+  3 .USER-DEFER  Tell the user that this is a USER deferred word and
+  4    decompile its current definition.
+  5 .OTHER   (S CFA -- )
+  6    This decompiles words whose category was is not known.  Code
+  7    words are recognized, as are words defined by defining words.
+  8    The runtime portion of a word defined by a defining word is
+  9    decompiled, since the parameter field is determined by the
+ 10    CREATE portion and cannot be deciphered.  If all else fails,
+ 11    the word is listed as UNKNOWN.
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 96         A:UTIHP.BLK 
+  0 \ Classify a word based on its CFA                    23JUN83HHL
+  1 
+  2 DEFINITION-CLASS
+  3    This categorizes the different classes of words that the
+  4    decompiler will handle.  For each class, determined by the
+  5    type of defining word used, the code field is identical.
+  6    Thus the standard classes are recognized.
+  7 
+  8 .DEFINITION-CLASS
+  9    These are the routines that handle the decompilation of
+ 10    each class.  The most useful, and of course most common one
+ 11    is .: which decompiles : definitions.  If the class is not
+ 12    recognized, we check to see if it is a CODE word or perhaps
+ 13    defined by a high level CREATE DOES>  word.
+ 14 
+ 15 
+
+Scr # 97         A:UTIHP.BLK 
+  0 \ Top level of the Decompiler SEE                     09SEP83HHL
+  1 ((SEE))   (S Cfa -- )
+  2    Takes an arbitrary code field address and decompiles it
+  3    based upon its definition class.  Upon completion, it
+  4    indicates whether or not the word is immediate.
+  5 
+  6 SEE   (S -- )
+  7    The user interface.  To decompile something type SEE xxx
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 98         A:UTIHP.BLK 
+  0 
+  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 99         A:UTIHP.BLK 
+  0 \ Variables and Setup                                 10Apr84map
+  1 EPSON   sets EPSON MX-80 printer to 132 column mode.
+  2 INIT-PR  sets printer to 132 column.  Default is EPSON.
+  3 FOOTING   Print a message at the bottom of the page.
+  4 LOGO      The Screen number of your LOGO screen
+  5 L/PAGE    The number of lines per page.
+  6 PAGE#     The current page number as we are printing.
+  7 PAGE      Printer dependent. Get to a new page.  Increment the
+  8    page number and reset the line number and the column number.
+  9 FORM-FEED Print a form feed character.
+ 10 (PAGE)    Print enough linefeeds to get to next page.
+ 11 (SEMIT)   send a character to either the printer or the console,
+ 12   but not both.
+ 13 The following words are used only in this utility:
+ 14 SCR#S     An array to hold a count and 6 screen numbers.
+ 15 
+
+Scr # 100         A:UTIHP.BLK 
+  0 \ Print 2 screens across on a page                    09Apr84map
+  1 TEXT?   (S Scr# -- f )
+  2    Given a screen number, returns true if the first character
+  3    in the screen is printable and the screen is not blank.
+  4 
+  5 PR   (S scr -- )
+  6    Add the screen to the array and increment the pointers.
+  7    If it is out of range, replace it with the logo screen.
+  8 2PR   (S Scr1# Scr2# line# -- )
+  9    Print the specified line from the two screens given on the
+ 10    stack.  The line from scr2 is copied to pad and the line
+ 11    from scr1 is appended, and the result is printed.
+ 12 2SCR   (S Scr1 Scr2 --- )
+ 13    Print 2 screens across on a page.  Calls 2PR on a line by
+ 14    line basis.
+ 15 
+
+Scr # 101         A:UTIHP.BLK 
+  0 \ Prints 6 screen on a page                           22Feb84map
+  1 P-HEADING   (S -- )
+  2    Prints the heading for each new page.
+  3 P-FOOTING   (S -- )
+  4    Prints the footing for each new page. Assumes form feed works
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 102         A:UTIHP.BLK 
+  0 \ Prints 6 screen on a page                           22Feb84map
+  1 PR-START
+  2    Initialize everything.
+  3 PR-STOP
+  4    Resets the deferred word EMIT to send to terminal.
+  5 PR-PAGE   (S -- )
+  6    Prints a page worth of screens without shadows.  The screens
+  7    are printed in vertical columns, 6 up on a page.
+  8 PR-S-PAGE   (S -- )
+  9    Prints a page worth of screens with shadows.  The source
+ 10    code appears in the left column, and the associated
+ 11    shadow on the right column.
+ 12 PR-FLUSH    (S -- f )
+ 13    Fills the SCR#S array if a page is partially filled.
+ 14    Returns true if there is more to print, otherwise
+ 15    false.
+
+Scr # 103         A:UTIHP.BLK 
+  0 \ Print Page with Shadows                             05Oct83map
+  1 SHOW  is the used to print a range of screens, from first to
+  2   last.  Screens are printed six to each page. This requires
+  3   a printer capable of 132 columns per line.  Some printers,
+  4   like the Epson, must be put into a mode where 132 columns
+  5   per line are available.  Blank screens are not printed.
+  6 
+  7 SHADOW SHOW  is similar, but prints three screens and their
+  8   three shadows on each page.
+  9 
+ 10 Typical usage:
+ 11   1 20 SHOW   or   1 20 SHADOW SHOW
+ 12 
+ 13 See the multi-tasker for an example of print spooling.
+ 14 LISTING  print entire file, with shadows.
+ 15 
+
+Scr # 104         A:UTIHP.BLK 
+  0                                                       12Oct83map
+  1   For example,
+  2    DEBUG WORDS   will  trace the execution of WORDS the next
+  3   time it is used.
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 105         A:UTIHP.BLK 
+  0 \ Print a High Level Trace                            10Mar84map
+  1 Put component words in BUG vocabulary.
+  2 L.ID  print the name of a word left justified in a field of
+  3   least len characters.
+  4 SLOW  when true, step continuously.
+  5 RES   when true, resume debugging.  See TRACE.
+  6 (DEBUG)  sets the upper and lower limits of the tracing window
+  7   to the given values, and patches next.
+  8 'UNNEST   find end of word to debug.
+  9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 106         A:UTIHP.BLK 
+  0 \ Enter and Leave the Debugger                        12Oct83map
+  1 TRACE  is executed every other pass thru NEXT.
+  2   It displays the contents of the parameter stack and the name
+  3   of the next word to be executed in the routine being debugged.
+  4   TRACE then waits for a key unless SLOW is true. If the key is
+  5   C, F, or Q, special action is taken, otherwise a single step
+  6   is performed. C turns on continuous running ( and SLOW).
+  7   F re-enters Forth and interprets commands until RESUME is
+  8   executed. Q aborts the trace and restores NEXT with FIX.
+  9 
+ 10 DEBUG  patches NEXT to the debugging version of NEXT.
+ 11   DEBUG also sets the upper and lower limits of the tracing
+ 12   region to the ends of the parameter field of the specified
+ 13   word.
+ 14 RESUME  turns on RES, which enables tracing to continue.
+ 15 
+
+Scr # 107         A:UTIHP.BLK 
+  0 \ Examples                                            10Mar84map
+  1 See BACKGROUND: and its shadow for spooler and counter tasks.
+  2 
+  3 To enable spooler, once defined, type MULTI. MULTI starts the
+  4 multi-tasker loop running. SINGLE stops it.
+  5 Then type SPOOLER WAKE to start the spooler task.
+  6 To put the spooler on hold, use  SPOOLER SLEEP
+  7 To restart it, use SPOOLER WAKE
+  8 
+  9 In general, executing the name of a task leaves the address of
+ 10 its user area on the stack. Words like sleep and wake use that
+ 11 address.
+ 12 
+ 13 
+ 14 
+ 15 
+
+Scr # 108         A:UTIHP.BLK 
+  0 \ Activate a Task                                     30Sep83map
+  1 TASK:  Name, initialize, and allocate a new task.
+  2  Copy the USER Area.  I point to where he pointed.
+  3  He points to me.
+  4  Set initial stack pointers.
+  5  Set dictionary pointer.
+  6  Make task ready to execute. Allocate task in host dictionary.
+  7 SET-TASK  assigns an existing task to the code at ip.
+  8  Get top of stack of the task to be used.
+  9  Put IP and RP values on its stack.
+ 10  Set its saved stack pointer.
+ 11 
+ 12 ACTIVATE  assigns an existing task to the following code,
+ 13  and makes it ready to execute.
+ 14 
+ 15 
+ ok
+110 list 
+Scr # 110         A:UTIHP.BLK 
+  0 Disk error in A:UTIHP.BLK   
+bye 
+104 Pages

@@ -1,0 +1,855 @@
+
+
+*** ruutu 0 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 1 ****
+\S  Selit{ ruutu                                                
+( x = luku, l = lista, a = alkio, e = ehto, t = toiminta )      
+( sanojen tarkoituksen n{et sanan AUTA avulla )                 
+                                                                
+a / l  Tee      : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 2 ****
+\S  Selit{ ruutu                                                
+( x = luku, l = lista, a = alkio, e = ehto, t = toiminta )      
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Uusi            : Hallintasana                                  
+x Vieritys      : Hallintasana                                  
+Korjaa          : Hallintasana                                  
+Pyyhi           : Grafiikkasana                                 
+Piirr{          : Grafiikkasana                                 
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 3 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Auta            : Hallintasana                                  
+x Lue           . Hallintasana                                  
+Avaa n          : Tiedostosana                                  
+Sulje           : Tiedostosana                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 4 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Talleta       : Hallintasana                                  
+Jos e Tosi? t Muuten t Jatka : Ohjausrakennesana                
+Jos e Vale? t Muuten t Jatka : Ohjausrakennesana                
+Jos e Tosi? t Jatka          : Ohjausrakennesana                
+Jos e Vale? t Jatka          : Ohjausrakennesana                
+x *Lue          : Tiedostosana                                  
+x *Talleta      : Tiedostosana                                  
+Poimi           : Tiedonhallintasana                            
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 5 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Muuttuja n      : Muuttujasana                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 6 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Toista e Yh{? t Alkuun       : Ohjausrakennesana                
+Toista e t Lopeta? Alkuun    : Ohjausrakennesana                
+Jos e Tosi? t Muuten t Jatka : Ohjausrakennesana                
+x Alkioksi                   : Listasana                        
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 7 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Suorita           : Laajennettavuussana                         
+x Kertaa t Viel{? : Ohjausrakennesana                           
+a Listaksi        : Listasana                                   
+x H{vit{          : Tiedonhallintasana                          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 8 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Kertaa t Viel{?       : Ohjausrakennesana                     
+Lis{{                   : Tiedosto- ja tiedonhallintasana       
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 9 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Lueluku       : Sy|tt|- ja tulostussana                       
+l Luelista      : Sy|tt|- ja tulostussana                       
+a Luealkio      : Sy|tt|- ja tulostussana                       
+" a             : Listasana                                     
+Tietokanta      : Tiedosto- ja tiedonhallintasana               
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 10 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Alas          : Grafiikkasana                                 
+x Yl|s          : Grafiikkasana                                 
+x Ruutuinen     : Tiedosto- ja tiedonhallintasana               
+Tiedosto        : Tiedosto- ja tiedonhallintasana               
+Kaikkitulosta   : Tiedosto- ja tiedonhallintasana               
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 11 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Pino N{yt{      : Pinosana                                      
+Pino Piilota    : Pinosana                                      
+Jos ...         : Ohjausrakennesana                             
+x Tab           : Tiedosto- ja tiedonhallintasana               
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 12 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Eteen         : Grafiikkasana                                 
+x Taakse        : Grafiikkasana                                 
+x Oikea         : Grafiikkasana                                 
+x Vasen         : Grafiikkasana                                 
+Jos e On x Niin t Loppuun .. Ellei t Loppu  : Ohjausrakennesana 
+a Luvuksi       : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 13 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Selit{ n        : Hallintasana                                  
+Paperille       : Hallintasana                                  
+Ruudulle        : Hallintasana                                  
+Uusisivu        : Sy|tt|- ja tulostussana                       
+x x Paikka      : Grafiikkasana                                 
+Kotiin          : Grafiikkasana                                 
+Konna           : Grafiikkasana                                 
+Laajennus n     : Laajennettavuussana                           
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 14 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 15 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Kuva            : Hallintasana                                  
+x x Piste       : Sy|tt|- ja tulostussana                       
+Luo n .. Valmis : Laajennettavuussana                           
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 16 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x x Viiva       : Sy|tt|- ja tulostussana                       
+x x Rviiva      : Sy|tt|- ja tulostussana                       
+x x x x Jana    : Sy|tt|- ja tulostussana                       
+(               : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 17 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Pino N{yt{      : Pinosana                                      
+Pino Piilota    : Pinosana                                      
+Asema N{yt{     : Grafiikkasana                                 
+Asema Piilota   : Grafiikkasana                                 
+Int             : Laskentasana                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 18 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Sattuma       : Laskentasana                                  
+Dir             : Tiedosto- ja tiedonhallintasana               
+A:, B:, C:      : Tiedosto- ja tiedonhallintasana               
+x/l/a x x Vie   : Tiedosto- ja tiedonhallintasana               
+x x Tuo         : Tiedosto- ja tiedonhallintasana               
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 19 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x x Sivusuhde   : Grafiikkasana                                 
+x Sin           : Laskentasana                                  
+x Cos           : laskentasana                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 20 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Muista                : Laajennettavuussana                     
+[l{muista             : Laajennettavuussana                     
+>, <, >=, <=, ==, <>  : Ohjausrakennesana                       
+Ja, Tai, Ei           : Ohjausrakennesana                       
++, -, /, *, ^, Mod, = : Laskentasana                            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 21 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+?       : Pinosana                                              
+.       : Pinosana                                              
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 22 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 23 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x/l/a n Lle     : Muuttuja- ja jonosana                         
+n Arvo          : Muuttuja- ja jonosana                         
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 24 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Uusirivi          : Sy|tt|- ja tulostussana                     
+x x x Merkki      : Sy|tt|- ja tulostussana                     
+x/l/a x x Tulosta : Sy|tt|- ja tulostussana                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 25 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x Jono n        : Muuttuja- ja jonosana                         
+l/a P{{         : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 26 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+x/l/a Tuplaa    : Pinosana                                      
+x/l/a Vaihda    : Pinosana                                      
+x/l/a Kierr{    : Pinosana                                      
+x/l/a Poista    : Pinosana                                      
+x/l/a Yli       : Pinosana                                      
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 27 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Unohda n        : Laajennussana                                 
+l/a H{nt{       : Listasana                                     
+l/a Alkup{{     : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 28 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+Lopeta          : Hallintasana                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 29 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 30 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a Tuhoa       : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 31 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a Kpl         : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 32 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 33 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 34 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l l/a P{{ksi    : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 35 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l l/a Per{{n    : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 36 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a Kopio       : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 37 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a Per{        : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 38 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l l Liit{       : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 39 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a Lista?      : Listasana                                     
+x/l/a Alkio?    : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 40 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 41 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 42 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l a Kuuluu?     : Listasana                                     
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 43 ****
+\S  Selit{ ruutu                                                
+( x=luku, l=lista, a=alkio, n=nimi, e=ehto, t=toiminta )        
+( sanojen tarkoituksen n{et sanaa AUTA k{ytt{m{ll{ )            
+                                                                
+l/a l/a Samat?  : Listasana                                     
+                                                                
+                                                                
+a   ASCIIKSI    : Listasana                                     
+                  Alkio muutetaan ascii -koodin luvuksi         
+                                                                
+                                                                
+x   MERKIKSI    : Listasana                                     
+                  Luku muutetaan yhden merkin pit. alkioksi     
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 44 ****
+\S  Selit{ ruutu                                                
+x = luku, l = lista, a = alkio, e = ehto, t = toiminta          
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                

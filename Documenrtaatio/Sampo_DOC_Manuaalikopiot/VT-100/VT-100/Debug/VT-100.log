@@ -1,0 +1,21 @@
+﻿  Vt-100.c
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(54,16): error C2065: 'ESC': undeclared identifier
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(54,16): warning C4047: 'function': 'const char *const ' differs in levels of indirection from 'int'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(54,16): warning C4024: 'printf': different types for formal and actual parameter 1
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(54,16): error C2143: syntax error: missing ')' before 'string'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(54,20): error C2059: syntax error: ')'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(55,16): error C2065: 'CSI': undeclared identifier
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(55,16): warning C4047: 'function': 'const char *const ' differs in levels of indirection from 'int'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(55,16): warning C4024: 'printf': different types for formal and actual parameter 1
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(55,16): error C2143: syntax error: missing ')' before 'string'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(55,25): error C2059: syntax error: ')'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(57,16): error C2065: 'CSI': undeclared identifier
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(57,16): warning C4047: 'function': 'const char *const ' differs in levels of indirection from 'int'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(57,16): warning C4024: 'printf': different types for formal and actual parameter 1
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(57,16): error C2143: syntax error: missing ')' before 'string'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(57,20): error C2059: syntax error: ')'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(58,16): error C2065: 'ESC': undeclared identifier
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(58,16): warning C4047: 'function': 'const char *const ' differs in levels of indirection from 'int'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(58,16): warning C4024: 'printf': different types for formal and actual parameter 1
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(58,16): error C2143: syntax error: missing ')' before 'string'
+C:\Sampo.doc\VT-100\VT-100\Vt-100.c(58,20): error C2059: syntax error: ')'

@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : rivita.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	char rivi[83];
+	rivi[80] = '\r';
+	rivi[81] = '\n';
+	FILE *in;
+	FILE * out
+	:
+	init i, kpl;
+	in = fopen("BOX.blk", "rb");
+	out = fopen("BOX.TXT", "wb");
+
+	for (i = 1; 1 < 10; i++) {
+		kpl = fread(rivi, sizeof(char), 80, in)
+		);
+		fwrite(fread(rivi, sizeof(char), 82, out));
+		if (kpl < 80) {
+			fclose(in);
+			fclose(out);
+			return EXIT_SUCCESS;
+		}
+	)
+
+}
+puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+
+return EXIT_SUCCESS;
+}

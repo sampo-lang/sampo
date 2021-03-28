@@ -1,0 +1,1591 @@
+22:56:34 **** Incremental Build of configuration Debug for project rivita ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rivita.o" "..\\src\\rivita.c" 
+Cannot run program "gcc": Launching failed
+
+Error: Program "gcc" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+
+22:59:10 **** Incremental Build of configuration Debug for project rivita ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rivita.o" "..\\src\\rivita.c" 
+Cannot run program "gcc": Launching failed
+
+Error: Program "gcc" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+
+23:01:36 **** Incremental Build of configuration Debug for project rivita ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rivita.o" "..\\src\\rivita.c" 
+Cannot run program "gcc": Launching failed
+
+Error: Program "gcc" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+
+23:08:20 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+23:10:30 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+23:11:07 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:\cygwin64\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+23:12:12 **** Incremental Build of configuration Debug for project rivita ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rivita.o" "..\\src\\rivita.c" 
+Cannot run program "gcc": Launching failed
+
+Error: Program "gcc" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+
+23:21:03 **** Incremental Build of configuration Debug for project rivita ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+23:26:03 **** Incremental Build of configuration Debug for project rivita ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\TwinCAT\Common64;C:\TwinCAT\Common32;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Calibre2\;C:\TDM-GCC-64\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\GNU Tools Arm Embedded\9 2019-q4-major\bin;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Käyttäjä\AppData\Local\Programs\Python\Python38\;C:\Users\Käyttäjä\AppData\Local\Microsoft\WindowsApps;C:\Users\Käyttäjä\AppData\Local\GitHubDesktop\bin;C:\Sampo\eclipse]
+23:32:53 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+23:34:13 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+10:57:25 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+10:57:41 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:58:12 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:58:35 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:59:21 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:00:22 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:01:04 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:01:32 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:02:07 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:02:36 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:03:23 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:05:20 **** Clean-only build of configuration Debug for project rivita ****
+make clean 
+rm -rf  ./src/rivita.o  ./src/rivita.d  rivita.exe
+ 
+11:05:23 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:06:22 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:07:43 **** Clean-only build of configuration Debug for project rivita ****
+make clean 
+rm -rf  ./src/rivita.o  ./src/rivita.d  rivita.exe
+ 
+11:07:47 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:08:25 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:08:38 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:20:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+   20 |  :
+      |  ^
+../src/rivita.c:20:2: error: expected expression before ':' token
+../src/rivita.c:23:2: error: 'out' undeclared (first use in this function)
+   23 |  out = fopen("BOX.TXT", "wb");
+      |  ^~~
+../src/rivita.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/rivita.c:25:7: error: 'i' undeclared (first use in this function); did you mean 'in'?
+   25 |  for (i = 1; 1 < 10; i++) {
+      |       ^
+      |       in
+../src/rivita.c:26:3: error: 'kpl' undeclared (first use in this function)
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |   ^~~
+../src/rivita.c:26:42: error: expected ';' before ')' token
+   26 |   kpl = fread(rivi, sizeof(char), 80, in)
+      |                                          ^
+      |                                          ;
+   27 |   );
+      |   ~                                       
+../src/rivita.c:27:3: error: expected statement before ')' token
+   27 |   );
+      |   ^
+../src/rivita.c:28:3: error: too few arguments to function 'fwrite'
+   28 |   fwrite(fread(rivi, sizeof(char), 82, out));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:34:2: error: expected statement before ')' token
+   34 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:10:16 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:29:46: error: expected ';' before ')' token
+   29 |   kpl = fread(rivi, sizeof(char), 80, infile)
+      |                                              ^
+      |                                              ;
+   30 |   );
+      |   ~                                           
+../src/rivita.c:30:3: error: expected statement before ')' token
+   30 |   );
+      |   ^
+../src/rivita.c:31:10: warning: passing argument 1 of 'fwrite' makes pointer from integer without a cast [-Wint-conversion]
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          size_t {aka unsigned int}
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:49: note: expected 'const void *' but argument is of type 'size_t' {aka 'unsigned int'}
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                                 ^~~~~~~~~~~~
+../src/rivita.c:31:3: error: too few arguments to function 'fwrite'
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:37:2: error: expected statement before ')' token
+   37 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:10:49 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:29:46: error: expected ';' before ')' token
+   29 |   kpl = fread(rivi, sizeof(char), 80, infile)
+      |                                              ^
+      |                                              ;
+   30 |   );
+      |   ~                                           
+../src/rivita.c:30:3: error: expected statement before ')' token
+   30 |   );
+      |   ^
+../src/rivita.c:31:10: warning: passing argument 1 of 'fwrite' makes pointer from integer without a cast [-Wint-conversion]
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          size_t {aka unsigned int}
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:49: note: expected 'const void *' but argument is of type 'size_t' {aka 'unsigned int'}
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                                 ^~~~~~~~~~~~
+../src/rivita.c:31:3: error: too few arguments to function 'fwrite'
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:37:2: error: expected statement before ')' token
+   37 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:11:25 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:29:46: error: expected ';' before ')' token
+   29 |   kpl = fread(rivi, sizeof(char), 80, infile)
+      |                                              ^
+      |                                              ;
+   30 |   );
+      |   ~                                           
+../src/rivita.c:30:3: error: expected statement before ')' token
+   30 |   );
+      |   ^
+../src/rivita.c:31:10: warning: passing argument 1 of 'fwrite' makes pointer from integer without a cast [-Wint-conversion]
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          size_t {aka unsigned int}
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:49: note: expected 'const void *' but argument is of type 'size_t' {aka 'unsigned int'}
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                                 ^~~~~~~~~~~~
+../src/rivita.c:31:3: error: too few arguments to function 'fwrite'
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:37:2: error: expected statement before ')' token
+   37 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:12:49 **** Clean-only build of configuration Debug for project rivita ****
+make clean 
+rm -rf  ./src/rivita.o  ./src/rivita.d  rivita.exe
+ 
+11:12:52 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:29:46: error: expected ';' before ')' token
+   29 |   kpl = fread(rivi, sizeof(char), 80, infile)
+      |                                              ^
+      |                                              ;
+   30 |   );
+      |   ~                                           
+../src/rivita.c:30:3: error: expected statement before ')' token
+   30 |   );
+      |   ^
+../src/rivita.c:31:10: warning: passing argument 1 of 'fwrite' makes pointer from integer without a cast [-Wint-conversion]
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          size_t {aka unsigned int}
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:49: note: expected 'const void *' but argument is of type 'size_t' {aka 'unsigned int'}
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                                 ^~~~~~~~~~~~
+../src/rivita.c:31:3: error: too few arguments to function 'fwrite'
+   31 |   fwrite(fread(rivi, sizeof(char), 82, outfile));
+      |   ^~~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:768:41: note: declared here
+  768 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fwrite (const void *, size_t, size_t, FILE *);
+      |                                         ^~~~~~
+../src/rivita.c:37:2: error: expected statement before ')' token
+   37 |  )
+      |  ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:14:10 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:36:3: error: expected statement before ')' token
+   36 |   )
+      |   ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:15:12 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:36:3: error: expected statement before ')' token
+   36 |   )
+      |   ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:10 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+11:16:40 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+11:17:56 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+11:20:04 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+11:22:51 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+11:23:13 **** Clean-only build of configuration Debug for project rivita ****
+make clean 
+rm -rf  ./src/rivita.o  ./src/rivita.d  rivita.exe
+ 
+11:23:15 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+11:23:24 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+11:24:21 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+11:24:46 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+11:25:37 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:34:35 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:38:12 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+12:39:39 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:40:31 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:42:15 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:45:06 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+12:46:15 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+12:48:29 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+12:49:32 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:27:12: error: too few arguments to function 'fopen'
+   27 |  outfile = fopen("METAHPU.TXT");
+      |            ^~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:260:41: note: declared here
+  260 | _CRTIMP __cdecl __MINGW_NOTHROW  FILE * fopen (const char *, const char *);
+      |                                         ^~~~~
+../src/rivita.c: At top level:
+../src/rivita.c:32:2: warning: data definition has no type or storage class
+   32 |  rivi[64] = '\r';
+      |  ^~~~
+../src/rivita.c:32:2: warning: type defaults to 'int' in declaration of 'rivi' [-Wimplicit-int]
+../src/rivita.c:32:2: error: conflicting types for 'rivi'
+../src/rivita.c:16:6: note: previous declaration of 'rivi' was here
+   16 | char rivi[67];
+      |      ^~~~
+../src/rivita.c:32:13: error: invalid initializer
+   32 |  rivi[64] = '\r';
+      |             ^~~~
+../src/rivita.c:33:2: warning: data definition has no type or storage class
+   33 |  rivi[65] = '\n';
+      |  ^~~~
+../src/rivita.c:33:2: warning: type defaults to 'int' in declaration of 'rivi' [-Wimplicit-int]
+../src/rivita.c:33:2: error: conflicting types for 'rivi'
+../src/rivita.c:16:6: note: previous declaration of 'rivi' was here
+   16 | char rivi[67];
+      |      ^~~~
+../src/rivita.c:33:13: error: invalid initializer
+   33 |  rivi[65] = '\n';
+      |             ^~~~
+../src/rivita.c:35:2: error: expected identifier or '(' before 'for'
+   35 |  for (i = 1; i < 10000; i++) {
+      |  ^~~
+../src/rivita.c:35:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   35 |  for (i = 1; i < 10000; i++) {
+      |                ^
+../src/rivita.c:35:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   35 |  for (i = 1; i < 10000; i++) {
+      |                          ^~
+../src/rivita.c:48:1: error: expected identifier or '(' before '}' token
+   48 | }
+      | ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:50:40 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:27:12: error: too few arguments to function 'fopen'
+   27 |  outfile = fopen("METAHPU.TXT");
+      |            ^~~~~
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:260:41: note: declared here
+  260 | _CRTIMP __cdecl __MINGW_NOTHROW  FILE * fopen (const char *, const char *);
+      |                                         ^~~~~
+../src/rivita.c: At top level:
+../src/rivita.c:32:2: warning: data definition has no type or storage class
+   32 |  rivi[64] = '\r';
+      |  ^~~~
+../src/rivita.c:32:2: warning: type defaults to 'int' in declaration of 'rivi' [-Wimplicit-int]
+../src/rivita.c:32:2: error: conflicting types for 'rivi'
+../src/rivita.c:16:6: note: previous declaration of 'rivi' was here
+   16 | char rivi[67];
+      |      ^~~~
+../src/rivita.c:32:13: error: invalid initializer
+   32 |  rivi[64] = '\r';
+      |             ^~~~
+../src/rivita.c:33:2: warning: data definition has no type or storage class
+   33 |  rivi[65] = '\n';
+      |  ^~~~
+../src/rivita.c:33:2: warning: type defaults to 'int' in declaration of 'rivi' [-Wimplicit-int]
+../src/rivita.c:33:2: error: conflicting types for 'rivi'
+../src/rivita.c:16:6: note: previous declaration of 'rivi' was here
+   16 | char rivi[67];
+      |      ^~~~
+../src/rivita.c:33:13: error: invalid initializer
+   33 |  rivi[65] = '\n';
+      |             ^~~~
+../src/rivita.c:35:2: error: expected identifier or '(' before 'for'
+   35 |  for (i = 1; i < 10000; i++) {
+      |  ^~~
+../src/rivita.c:35:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   35 |  for (i = 1; i < 10000; i++) {
+      |                ^
+../src/rivita.c:35:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   35 |  for (i = 1; i < 10000; i++) {
+      |                          ^~
+../src/rivita.c:48:1: error: expected identifier or '(' before '}' token
+   48 | }
+      | ^
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:50:45 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:07:55 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:16:00 **** Clean-only build of configuration Debug for project rivita ****
+make clean 
+rm -rf  ./src/rivita.o  ./src/rivita.d  rivita.exe
+ 
+13:16:10 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:16:23 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:48:24 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:50:07 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+13:50:41 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:28:31 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+21:29:14 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c:17:1: error: unknown type name 'chat'; did you mean 'char'?
+   17 | chat otsikko[80];
+      | ^~~~
+      | char
+../src/rivita.c: In function 'main':
+../src/rivita.c:46:11: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |           ^~~~~~~
+      |           |
+      |           int *
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:463:47: note: expected 'char *' but argument is of type 'int *'
+  463 | _CRTIMP __cdecl __MINGW_NOTHROW  int sprintf (char *, const char *, ...);
+      |                                               ^~~~~~
+../src/rivita.c:46:32: warning: format '%n' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   46 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                               ~^           ~
+      |                                |           |
+      |                                int *       int
+      |                               %d
+../src/rivita.c:46:40: warning: embedded '\0' in format [-Wformat-contains-nul]
+   46 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                                        ^~
+../src/rivita.c:47:33: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   47 |   fwrite(otsikko, sizeof(char), strlen(otsikko), outfile);
+      |                                 ^~~~~~
+../src/rivita.c:47:33: warning: incompatible implicit declaration of built-in function 'strlen'
+../src/rivita.c:13:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   12 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   13 | 
+../src/rivita.c:47:40: warning: passing argument 1 of 'strlen' from incompatible pointer type [-Wincompatible-pointer-types]
+   47 |   fwrite(otsikko, sizeof(char), strlen(otsikko), outfile);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        int *
+../src/rivita.c:47:40: note: expected 'const char *' but argument is of type 'int *'
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:30:06 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c:18:1: error: unknown type name 'chat'; did you mean 'char'?
+   18 | chat otsikko[80];
+      | ^~~~
+      | char
+../src/rivita.c: In function 'main':
+../src/rivita.c:47:11: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |           ^~~~~~~
+      |           |
+      |           int *
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:463:47: note: expected 'char *' but argument is of type 'int *'
+  463 | _CRTIMP __cdecl __MINGW_NOTHROW  int sprintf (char *, const char *, ...);
+      |                                               ^~~~~~
+../src/rivita.c:47:32: warning: format '%n' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                               ~^           ~
+      |                                |           |
+      |                                int *       int
+      |                               %d
+../src/rivita.c:47:40: warning: embedded '\0' in format [-Wformat-contains-nul]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                                        ^~
+../src/rivita.c:48:40: warning: passing argument 1 of 'strlen' from incompatible pointer type [-Wincompatible-pointer-types]
+   48 |   fwrite(otsikko, sizeof(char), strlen(otsikko), outfile);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        int *
+In file included from ../src/rivita.c:13:
+c:\mingw\include\string.h:83:49: note: expected 'const char *' but argument is of type 'int *'
+   83 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t strlen (const char *) __MINGW_ATTRIB_PURE;
+      |                                                 ^~~~~~~~~~~~
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:30:26 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c:18:1: error: unknown type name 'chat'; did you mean 'char'?
+   18 | chat otsikko[80];
+      | ^~~~
+      | char
+../src/rivita.c: In function 'main':
+../src/rivita.c:47:11: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |           ^~~~~~~
+      |           |
+      |           int *
+In file included from ../src/rivita.c:11:
+c:\mingw\include\stdio.h:463:47: note: expected 'char *' but argument is of type 'int *'
+  463 | _CRTIMP __cdecl __MINGW_NOTHROW  int sprintf (char *, const char *, ...);
+      |                                               ^~~~~~
+../src/rivita.c:47:32: warning: format '%n' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                               ~^           ~
+      |                                |           |
+      |                                int *       int
+      |                               %d
+../src/rivita.c:47:40: warning: embedded '\0' in format [-Wformat-contains-nul]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                                        ^~
+../src/rivita.c:48:40: warning: passing argument 1 of 'strlen' from incompatible pointer type [-Wincompatible-pointer-types]
+   48 |   fwrite(otsikko, sizeof(char), strlen(otsikko), outfile);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        int *
+In file included from ../src/rivita.c:13:
+c:\mingw\include\string.h:83:49: note: expected 'const char *' but argument is of type 'int *'
+   83 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t strlen (const char *) __MINGW_ATTRIB_PURE;
+      |                                                 ^~~~~~~~~~~~
+make: *** [src/rivita.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:31:04 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:47:32: warning: format '%n' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                               ~^           ~
+      |                                |           |
+      |                                int *       int
+      |                               %d
+../src/rivita.c:47:40: warning: embedded '\0' in format [-Wformat-contains-nul]
+   47 |   sprintf(otsikko, "*** ruutu %n ****\n\0",i);
+      |                                        ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:31:13 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+21:32:21 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+21:36:31 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:41: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "*** ruutu %i ****\n\0", i / 24);
+      |                                         ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:37:26 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:41: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "*** ruutu %i ****\n\0", i / 16);
+      |                                         ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:38:56 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:39:49 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+21:40:40 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+09:11:21 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:48:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   48 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+10:31:25 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+10:32:40 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+10:34:57 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+../src/rivita.c:49:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   49 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+../src/rivita.c:23:8: warning: unused variable 'nimi' [-Wunused-variable]
+   23 |  char *nimi = argv[1];
+      |        ^~~~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+10:36:04 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+10:40:14 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+../src/rivita.c:54:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   54 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+10:41:24 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+../src/rivita.c:54:45: warning: embedded '\0' in format [-Wformat-contains-nul]
+   54 |    sprintf(otsikko, "\n\n*** ruutu %i ****\n\0", i / 16);
+      |                                             ^~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+19:47:21 **** Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+19:52:35 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+make: Nothing to be done for `all'.
+19:52:46 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 

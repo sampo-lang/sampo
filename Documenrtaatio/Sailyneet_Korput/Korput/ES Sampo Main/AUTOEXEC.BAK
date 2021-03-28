@@ -1,0 +1,7 @@
+path=\;\sys;\gwbasic;\kermit
+rtc
+xmode/c8
+keybsu
+mode com1:9600,n,8,1
+cls
+

@@ -1,0 +1,190 @@
+
+
+*** ruutu 0 ****
+                                                                
+                                                                
+                                                                
+        H   H  EEEE  L     PPP                                  
+        H   H  E     L     P  P                                 
+        HHHHH  EEE   L     PPP                                  
+        H   H  E     L     P                                    
+        H   H  EEEE  LLLL  P                                    
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 1 ****
+\ Auta ruutujen k{sittely                                       
+cr .( help start ) cr                                           
+2 4 THRU   CR .( HELP OK ) cr                                   
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 2 ****
+\ Auta-ruutujen k{sittely                                       
+                                                                
+: AUTALUE                       \ N , -                         
+  FILE @ >R                                                     
+  AUTA.BLK OPEN-FILE                                            
+  LIST                                                          
+  R> !FILES                                                     
+;                                                               
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 3 ****
+\ Auta-ruutujen k{sittely                                       
+                                                                
+: AUTA                                                          
+  1 AUTALUE                                                     
+;                                                               
+                                                                
+: SEU                                                           
+  SCR @ 1+ AUTALUE                                              
+;                                                               
+                                                                
+: ED                                                            
+  SCR @ 1 - DUP 0 >=                                            
+  IF AUTALUE                                                    
+  ELSE DROP THEN                                                
+;                                                               
+                                                                
+
+
+*** ruutu 4 ****
+\                                                               
+: apu fix drop autalue ;                                        
+                                                                
+: hal 2 autalue ;                                               
+: sy| 3 autalue ;                                               
+: gra 5 autalue ;                                               
+: laa 6 autalue ;                                               
+: ohj 7 autalue ;                                               
+: pin 9 autalue ;                                               
+: las 10 autalue ;                                              
+: muu 11 autalue ;                                              
+: lst 12 autalue ;                                              
+: tie 15 autalue ;                                              
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 5 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 6 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 7 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 8 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 9 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                

@@ -1,0 +1,77 @@
+﻿Copyright SYSTIIMI 0y. OULU 30. maaliskuuta 1987 2
+SISQLLXSLLLEIIILQ
+HALUNTA:
+LOPETA, AUTA, SELITA. LUE, TALLETA. PAPERILLE, RUUDULLE
+KUVA, PRTSC, UUSI, VIEHITYS 3
+KORJAA . 3
+svbrrb JA TULOSTUS
+Telatlmuotolset aanal
+LUELUKU. UUSIRIVI, UUSIUUSIRIVI, UUSISIVU, LUELISTA,
+LUEALKIO 4
+Graﬂlklakoordlnaatlston amt 1
+PISTE, VHVA, RVHVA, JANA 5
+Tekstlkoordlnaatlaton sanat
+MERKKI. TULOSTA 5
+GRAFIIKKA
+ASEMA NAYTA, ASEMA PIILOTA, ALAS 5
+YLOS, ETEEN, TAAKSE, OIKEA, VASEN PYYHI, P|1RFu"\, PAIKKA, KOTHN,
+KONNA, KULMA. suuum XKO. YKO, SIVUSUHDE 6
+LAAJENNETTAVUUS
+LUO, UNOHDA. SUORITA. MUISTA, ALAMUISTA, SAVE 7
+OHJAUSRAKENTEET
+KERTAA-V|ELA?, TOISTA-YHI“\?-ALKUUN?, TOlSTA-LOPETA?-
+ALKUUN 8
+JOS-TOSI?-MUUTEN-JATKA, JOS-VALE?~MUUTEN-JATKA.
+JOS-ON-NllN-LOPPUUN-ELLEI-LOPPU, EHTOLAUSEKKEET 9
+PINOT
+PINO NAYTA. PINO PIILOTA, TUPLAA, VAIHDA, KIERRA, POISTA,
+YLl,?, . 10
+LASKENTA
++, -, '. I, ", MOD, INT, SIN, COS, SATTUMA 11
+MUUTTUJAT JA JONOT
+MUUTTUJA, LLE. ARVO, JONO 12
+LISTAT
+( , PM, PAAKSL PERAAN, HANTK, PERA, ALKUPAA, KPL, ALKIO?
+ALKDKSI 12
+LIST A?,LlSTAKSl, KUULUU'?, LIITK, TEE, ' , TUHOA, LUVUKSI.
+KOPIO, $AMAT?, ASCIIKSI, MERKIKSI , 13
+TIEDOSTUI JA TIEDONHALLINTA
+DIR, A:, B2, Ct. AVAA. SULJE.'LUE, “YALLETA, RUUTUINEN,
+neoosro, we ' 14
+TUO. TIETOKANTA, HAv|TA.usAA. Powu, TAB, KAIKKITULOSTA 15
+Copyright SYSTHMI Oy, OULU 30. maaliskuuta 1987 3
+.L_JiALL1NIA
+SAMPO-kielen kéyttﬁ perustuu lukujen, SAMPO-sanojen ja muutamien ari-
+tyisnéppéimien kﬁyttﬁén. Luvuista ja sanoista muodostuneita komento-
+rivejé voit kirjoittaa kuvaruudun alaosaan, jossa on néikyvissé 1 - 23 yl6s-
+pam ruﬂaavaa komentorivié (aloituksen seké sanojen UUSI ja KONNA
+jailkeen 1 rivi). Kirjoitettua komentorivié aletaan suorittamaan Enter-
+néppéimen painalluksen jélkeen.
+Varsinaiset hallintasanat ovat:
+LOPETA
+Lopettaa SAMPO tulkin toiminnan. Palataan kéyttdjérjestelmén
+alaisuuteen. *
+AUTA '
+Néyttié olemassaolevat SAMPO-sanaryhmét ja opastaa ryhmien
+tarkempaan katseluun.
+SELITA x
+Hakee ruudun, jossa selitetéié-in sanan x tarvitsemat léhtﬁtiedot
+ja niiden tyypit.
+x LUE
+Lukee ruudun x tyétilaan.
+x TALLETA
+Tailettaa tyiitilan ruuduksi x levykkeelle.
+PAPERILLE
+Ohjaa néyttéruudulle tulevan tulostuksen my6s kirjoittimelle.
+RUUDULLE
+Paluu pelkéstéén néyttﬁruututulostukseen.
+KUVA
+Tulostaa grafiikkamuotoisen néyttﬁruudun paperille.
+PRTSC-néppiin
+Tulostal tnkstimuotoisen néiytlﬁruudun kirjoittimelle.
+UUSI
+Tyhjentéé néyttbruudun.
+
+
+
+

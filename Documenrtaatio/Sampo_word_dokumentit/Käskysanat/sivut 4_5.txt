@@ -1,0 +1,67 @@
+﻿Copyright SYST|IMlOy, OULU so. maaliskuuta I987 4
+x VIERITYS
+Méérétéi-in kerrallaan nikyvien komentorivien mééré (rullausalue,
+jossa x vélillé 1 - 23). Sanojen UUSI ja KONNA jéIkeen xzn arvona 1.
+Ruutujen Iukemisan ja editoinnin jélkeen xzn arvona 23.
+KORJAA
+Kéynnistéé SAMPO-editorin. Editorin komennot saat sen
+jélkeen ni-ikyviin CTRIJQ néppéilyllé.
+2 
+Sybtt6- ja tuIostussanoiIIa luetaan Iukuja ja listoja péétteelté. tulos-
+tetaan néiyt6|Ie pisteiti-'1, ASCII merkistﬁn merkkejé ja muotoillaan tulos-
+tusta. Tulostuksessa voidaan kéyttéié joko graafista koordinaatistoa
+(640'200 ) tai Iekstikoordinaatistoa (64‘24). Témén mukaisesti sanat
+gas-taan tekstimuotoisiin sanoihin, grafiikkakoordinaatiston sanoihin ja
+Iekstikoordinaatiston sanoihin.
+“II. .
+LUELUKU
+Lukee Iuvun péétteelté pinon pééhén. Luvun yhteydesséi kéy-
+tettéivéiid ohjetekstié (LUKU:) voit muuttaa muuttujan LUKUTEKSTI
+arvoa muuttamaIIa.
+UUSIRIVI
+Tuottaa rivinvaihdon tulostuksessa néyttéiruudulle ja kir-
+joittimelle (PAPERILLE sanan jélkeen).
+UUSISIVU
+Tuonaa sivunvaihdon tulostuksessa kirjoittimelle (PAPERILLE
+sanan jélkean).
+LUELISTA
+Lukee Iistan péétteelté pinon pééhén. Luvun yhteydessé tuIostuvaa
+ohjetekstié voit muuttaa muuttujaa LISTATEKSTI muuttamalla.
+LUEALKIO
+Lukee alkion pééneeltﬁ pinon pidéhén. Luvun yhteydessé
+tuiostuvaa ohjetekstié voit muuttaa muuttujaa ALKIOTEKSTI
+muuttamaﬂa.
+I
+Copyright SYSTIIMI Oy, OULU 30. maaliskuuta 1987 5
+HEWHI I. .
+x y PISTE
+Tulostaa pisteen paikkaan x,y graaﬁsessa koordinaatistossa.
+x y VIIVA
+Vetéé viivan nykyisesté asemasta paikkaan x,y.
+x y RVIIVA
+Vetﬁﬁ viivan kasvattaan nykyisen koordinaatin arvoja x Ilé ja
+y llé.
+x1 y1 x2 y2 JANA
+Veti-ii viivan paikasta x1 ,y1 paikkaan x2,y2.
+"II .| H .
+n x y MERKKI
+Tulostaa ASCII merkistén merkin numero n paikkaan x,y
+tekstikoordinaatistossa.
+x y TULOSTA
+Tulostaa pinon pééssé olevan Iuvun, muuttujan , alkion tai Iistan
+paikkaan x,y tekstikoordinaatistossa.
+EEIIISISA
+Grafiikkasanat ohjaavat konnan kulkua tyéalueella. Tyéalueen koko rajoit-
+taa annettavien askelten mééréié.
+Konnan kuIma annetaan asteissa. Seké konnan sijainti ettéi konnan suunta
+mama saadaan nékyville néyttﬁruudun ylériville.
+ASEMA NAYTA
+Tuottaa konnan aseman nékyviin niéyttéruudun yIla'riviIIe.
+ASEMA PIILOTA
+Poistaa konnan aseman néikyvisté.
+ALAS
+Laskee konnan alas néyt6IIe.
+
+
+
+

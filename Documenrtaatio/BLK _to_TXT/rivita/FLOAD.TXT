@@ -1,0 +1,570 @@
+
+
+*** ruutu 0 ****
+\                                             >6.3.86-HPU       
+                                                                
+        FFFFFF  L        OOOOO                                  
+        F       L       O     O                                 
+        F       L       O     O                                 
+        FFFF    L       O     O                                 
+        F       L       O     O                                 
+        F       L       O     O                                 
+        F       LLLLLL   OOOOO                                  
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 1 ****
+\ SAMPO:n latausruutu alkaen FORTHP:st{                       hp
+                                                                
+           FROM  b:ES.BLK      1 LOAD                           
+ 6 VIEW# ! FROM  b:TURTLE.BLK  1 LOAD                           
+ 7 VIEW# ! FROM  b:LISTAT.BLK  1 LOAD                           
+ 8 VIEW# ! FROM  b:CONTROL.BLK 1 LOAD                           
+ 9 VIEW# ! FROM  b:MUUT.BLK    1 LOAD                           
+10 VIEW# ! FROM  b:EVAL.BLK    1 LOAD                           
+13 VIEW# ! FROM  b:BASE.BLK    1 LOAD                           
+16 VIEW# ! FROM  b:HELP.BLK    1 LOAD                           
+                                                                
+11 VIEW# !         3 23 THRU                                    
+                                                                
+: MARK  CREATE DOES> (FORGET) ;                                 
+                                                                
+-->                                                             
+
+
+*** ruutu 2 ****
+\ SAMPO:n 2. latausruutu                                      HL
+                                                                
+HERE  FENCE ! MARK TYHJ[                                        
+                                                                
+SAVE-SYSTEM SAMSRC.COM                                          
+                                                                
+CR                                                              
+.( SAMSRC.COM talletettu )                                      
+CR                                                              
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 3 ****
+\ SAMPO:tiedostonk{sittely                                      
+                        VARIABLE *NRO                           
+: AVAA                                                          
+  OPEN IN-FILE @ APUTIETO ! 0 *NRO ! ;                          
+: SULJE                                                         
+  0 APUTIETO ! ;                                                
+: LUE TMOODI CR CR CR                                           
+  SAMPO.BLK OPEN-FILE                                           
+  FIX DROP DUP LIST DUP *NRO ! SCR  ! ;                         
+: OTA-RUUTU                                                     
+   [ FORTH ] *NRO @ DUP 0>=                                     
+     IF ['] SAMPO.BLK 2 + IN-FILE ! SWAP 1                      
+     ELSE APUTIETO @ DUP IF IN-FILE ! NEGATE SWAP 1             
+                         ELSE 2DROP 0 THEN                      
+     THEN                                                       
+   [ SAMPO ] ;                                                  
+
+
+*** ruutu 4 ****
+\ Lis{{ tied. k{s.                                              
+                                                                
+: TALLETA                                                       
+  FIX DROP [ FORTH ] SAMPO.BLK                                  
+  [ SAMPO ] OTA-RUUTU IF COPY THEN                              
+;                                                               
+: *LUE FIX DROP DUP NEGATE *NRO ! TMOODI CR CR CR               
+  APUTIETO @ IF  APUTIETO @ !FILES OPEN-FILE DUP LIST SCR !     
+             ELSE CR ." APUTIEDOSTO EI AUKI " DROP              
+             THEN                                               
+;                                                               
+: *TALLETA FIX DROP                                             
+  APUTIETO @ IF  APUTIETO @ !FILES                              
+                 OTA-RUUTU DROP COPY                            
+             ELSE CR ." APUTIEDOSTO EI AUKI " DROP              
+             THEN ;                                             
+
+
+*** ruutu 5 ****
+\ Numerosta listaksi                          >5.3.86-HPU       
+HEX                                                             
+: NRO>LIST                                                      
+  0FFFE BUFFER                                                  
+  BUPO ! 20 BUF!                                                
+  ASCII ( BUF! 20 BUF!                                          
+  BUF-ENA .. BUF-DISA 20 BUF! ASCII ) BUF!                      
+  20 BUF! ASCII \ BUF! ASCII S BUF! 20 BUF! 0 BUF!              
+  FILE @ >R >IN @ >R BLK @ >R                                   
+  0 >IN ! 0FFFE BLK ! 0 >UPDATE !                               
+  INTERPRET                                                     
+  R> BLK ! R> >IN ! R> !FILES                                   
+;                                                               
+                                                                
+DECIMAL                                                         
+                                                                
+
+
+*** ruutu 6 ****
+\ Edelleen muunnoksia                         >5.3.86-HPU       
+                                                                
+: PPEN CR ." PINON P[[ EI LUKU " ;                              
+                                                                
+: (LISTAKSI)                            \ NRO , LISTA           
+  DUP JOS 1 NIIN PPEN     LOPPUUN                               
+          2 NIIN PPEN     LOPPUUN                               
+          3 NIIN PPEN     LOPPUUN                               
+          4 NIIN PPEN     LOPPUUN                               
+          ELLEI  NRO>LIST LOPPU                                 
+;                                                               
+                                                                
+: ALKIOKSI                              \ NRO , ALKIO           
+  (LISTAKSI) 2DUP P{{ 2SWAP TUHOA ;                             
+                                                                
+                                                                
+
+
+*** ruutu 7 ****
+\ Muunnoksia lis{{                                              
+HEX                                                             
+: LISTAKSI                              \ ALKIO , LISTA         
+  4 = IF -DUP IF   0 SWAP LOPPUSULKU 1                          
+              ELSE 8000 1 THEN                                  
+      ELSE DROP ." PINON P[[ EI OLE ALKIO " THEN ;              
+: (LUVUKSI)                             \ ALKIO t. LISTA , NRO  
+  DUP JOS 1 NIIN P{{ LISTAKSI 2DUP TEE                          
+                 2SWAP TUHOA                LOPPUUN             
+          4 NIIN KOPIO 2SWAP 2DROP LISTAKSI                     
+                 2DUP TEE 2SWAP TUHOA       LOPPUUN             
+            ELLEI 2DROP PPEL                LOPPU               
+; ' (LUVUKSI) IS LUVUKSI                                        
+: SUORITA    \ OTA RUUTU TARV TILAP NRON                        
+  0 OTA-RUUTU IF DROP LOAD THEN                                 
+; DECIMAL                                                       
+
+
+*** ruutu 8 ****
+\ Sekalaisia                                                    
+MUUTTUJA ALKIOTEKSTI    " SANA:  ALKIOTEKSTI LLE                
+                                                                
+MUUTTUJA LUKUTEKSTI     " LUKU:  LUKUTEKSTI  LLE                
+                                                                
+MUUTTUJA LISTATEKSTI    " LISTA: LISTATEKSTI LLE                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 9 ****
+\ Sekalaisia                                                    
+: genu 0 0                                                      
+  begin 2drop cr lukuteksti drop 2@ .. query 32 word number?    
+  until ;                                                       
+: luku 32 word dup c@ if number? if else 2drop genu then        
+  else drop genu then nornum ;    : LUELUKU LUKU ;              
+: LUELISTA RECURSIVE                                            
+  LISTATEKSTI DROP 2@ .. QUERY INTERPRET                        
+  DUP 1 <>                                                      
+  IF 2DROP LUELISTA THEN ;                                      
+                                                                
+: LUEALKIO RECURSIVE                                            
+  ALKIOTEKSTI DROP 2@ .. QUERY 32 WORD                          
+  DUP C@ IF   ALKIO SWAP DROP 4                                 
+         ELSE DROP LUEALKIO THEN                                
+;                                                               
+
+
+*** ruutu 10 ****
+\ Tiedoston luonti                                              
+                                                                
+VARIABLE TIEKOKO        10 TIEKOKO !                            
+                                                                
+: RUUTUINEN                                                     
+  FIX DROP TIEKOKO !                                            
+;                                                               
+: TIEDOSTO                                                      
+  TIEKOKO @ CREATE-FILE ;                                       
+                                                                
+: XKO                                                           
+  XCU @ STOD ;                                                  
+: YKO                                                           
+  YCU @ STOD ;                                                  
+: SUUNTA                                                        
+  KULMA @ STOD ;                                                
+
+
+*** ruutu 11 ****
+\ SAMPON: case                                                  
+                                                                
+VARIABLE JOSSP                                                  
+                                                                
+: N{YT{                                                         
+  2 = IF   1 SWAP !                                             
+      ELSE DROP ." Mik{? " THEN                                 
+;                                                               
+                                                                
+: PIILOTA                                                       
+  2 = IF   0 0 ROT 2!                                           
+      ELSE DROP ." Mik{? " THEN                                 
+;                                                               
+                                                                
+: JOS ;                                                         
+                                                                
+
+
+*** ruutu 12 ****
+\ SAMPON: case                                                  
+: ON      SP@ JOSSP ! COMPILE == COMPILE FIX                    
+          COMPILE DROP ;                      IMMEDIATE         
+                                                                
+: NIIN    COMPILE FIX COMPILE DROP                              
+          COMPILE OVER COMPILE = COMPILE ?BRANCH                
+          ?>MARK COMPILE DROP ;               IMMEDIATE         
+                                                                
+: LOPPUUN COMPILE BRANCH ?>MARK                                 
+          2SWAP ?>RESOLVE ;                   IMMEDIATE         
+                                                                
+: ELLEI   COMPILE DROP 0 ;                    IMMEDIATE         
+                                                                
+: LOPPU   DUP IF COMPILE DROP ELSE DROP THEN                    
+          BEGIN SP@ JOSSP @ <> WHILE                            
+          ?>RESOLVE REPEAT ;                  IMMEDIATE         
+
+
+*** ruutu 13 ****
+\ Selit{                                                        
+                                                                
+: SELIT{                                                        
+  ' [ DOS ] @VIEW DROP 30               \ Aina SELITA.BLK       
+  VIEW-FILES + @                                                
+  EXECUTE OPEN-FILE                                             
+  LIST                                                          
+;                                                               
+                                                                
+: PAPERILLE 1 P-IN ;   : RUUDULLE PAPERILLE ;                   
+                                                                
+: LAAJENNUS                                                     
+  SAVE-SYSTEM ;                                                 
+                                                                
+: UUSISIVU                                                      
+  12 EMIT ;                                                     
+
+
+*** ruutu 14 ****
+\ Hardcopy graafisesti, yksi tavu                               
+: HATAVU                           \ SARAKE RIVI , TAVU         
+  0 SWAP DUP 8 + SWAP                                           
+  DO                               \ I TAVU                     
+    2* OVER I                      \ TAVU COL ROW               
+    VIDIO21 1 AND +       \ PALAUTTAA PIXELIN TILAN             
+  LOOP                                                          
+  SWAP DROP ;                                                   
+: EPSONINI                                                      
+  27 (PRINT) ASCII 3 (PRINT) 24 (PRINT)                         
+  13 (PRINT) 10 (PRINT)                                         
+;                                                               
+ASCII L CONSTANT EPSMODE                                        
+: EPSONESC                                                      
+  27 (PRINT) EPSMODE (PRINT)                                    
+  128 (PRINT) 2 (PRINT) ;                                       
+
+
+*** ruutu 15 ****
+\ Hardcopy, ulompi looppi                                       
+DEFER INIT      DEFER LINIT                                     
+: HAULO                         \ - , -                         
+  INIT                                                          
+  193 0 DO LINIT                                                
+      640 0 DO                                                  
+            I J HATAVU (PRINT)                                  
+            LOOP                                                
+      13 (PRINT) 10 (PRINT)                                     
+      8 +LOOP                                                   
+;                                                               
+: KUVA                                                          
+  HAULO                                                         
+;                                                               
+  ' EPSONINI IS INIT ' EPSONESC IS LINIT                        
+                                                                
+
+
+*** ruutu 16 ****
+\ Erilaiset n{yt|t                                              
+MUUTTUJA AASEMA         MUUTTUJA PPINO                          
+: ASEMANAYTA                                                    
+  0 0 IBM-AT                                                    
+  XCU @ ." X = " . YCU @ ."  Y = "                              
+  . KULMA @ ."  KULMA = " .                                     
+;                                                               
+: PINONAYTA                                                     
+  0 1 IBM-AT                                                    
+  DEPTH 0 >= IF                                                 
+            DEPTH 0 ?DO I DUP 2+                                
+                   PICK SWAP 1+ PICK ..                         
+                   79 #OUT @ - SPACES CR                        
+                   2 +LOOP                                      
+            ." Pinon pohja" 229 SPACES                          
+      ELSE ." Pino vajaa " 230 SPACES QUIT THEN ;               
+
+
+*** ruutu 17 ****
+\                                                               
+                                                                
+: SAMPONAYTA                                                    
+  AASEMA DROP @ IF ASEMANAYTA THEN                              
+  PPINO  DROP @ IF PINONAYTA  THEN                              
+;                                                               
+                                                                
+' SAMPONAYTA IS NAYTA                                           
+?PINO ON                                                        
+: PINO                                                          
+  6 0 VIERITYS                  \ MUISTA ETTA 2 WORDS/ENTRY     
+  PPINO                                                         
+;                                                               
+: ASEMA                                                         
+  0 0 IBM-AT 80 SPACES 0 SCLINES IBM-AT                         
+  AASEMA ;                                                      
+
+
+*** ruutu 18 ****
+\ Tiedostonk{sittely, suorasaanti                               
+                                                                
+: TUO                                                           
+  2FIX PRINTTUO ;                                               
+                                                                
+: VIE                                                           
+  2FIX PRINTVIE ;                                               
+                                                                
+: DIR DIR ;                                                     
+: A: A: ;                                                       
+: B: B: ;                                                       
+: C: C: ;                                                       
+                                                                
+: OTA                                                           
+  FIX DROP 2* dup 2 + PICK                                      
+  SWAP 1 + PICK ;                                               
+
+
+*** ruutu 19 ****
+\ Muistaa komennut SAMPO.BLK RUUTU 0:LLE                        
+: (MUISTA)                                                      
+  FILE @ >R                                                     
+  SAMPO.BLK OPEN-FILE                                           
+  0 BLOCK UPDATE DUP                                            
+  64 + SWAP 960 CMOVE                                           
+  0 BLOCK 960 + DUP 64 BLANK                                    
+  TIB SWAP #TIB @ MOVE                                          
+  R> !FILES                                                     
+;                                                               
+: SIVUSUHDE                     \ N K , -                       
+  2FIX 2DUP MAX 32766 SWAP /                                    
+  SWAP OVER * IS MAXINTY                                        
+  * IS MAXINT ;                                                 
+: KULMA                                                         
+  FIX DROP 360 MOD YL\S KULMA ! ALAS ;                          
+
+
+*** ruutu 20 ****
+\ T{m{n tulee olla vihoviimeinen ruutu                          
+                                                                
+: MUISTA ['] (MUISTA) IS $JEMMA ;                               
+: [L[MUISTA ['] NOOP IS $JEMMA ;                                
+                                                                
+: + PLUS ;   : - MINUS ;   : * MUL ;   : / DIV ;                
+: MOD MMOD ; : ^ POT ;                                          
+                                                                
+: = == ;                   \ Laske lauseke                      
+                                                                
+\ Relaatio-operaattorit                                         
+: == (=) ;    : <> NE ;    : < LT ;     : > GT ;                
+: <= LE ;     : >= GE ;                                         
+                                                                
+\ Loogiset operaattorit                                         
+: JA AAND ;   : TAI OOR ;  : EI NNOT ;                          
+
+
+*** ruutu 21 ****
+\ T{m{n tulee olla vihoviimeinen ruutu                          
+                                                                
+: ? 2DUP .. ;                                                   
+                                                                
+: . .. ;                                                        
+                                                                
+                                                                
+: I II ;                                                        
+: J JJ ;                                                        
+                                                                
+: \ [COMPILE] \ ; IMMEDIATE                                     
+                                                                
+: ASETA FIX DROP [COMPILE] IS ; IMMEDIATE                       
+                                                                
+0 4 2CONSTANT NIL                                               
+                                                                
+
+
+*** ruutu 22 ****
+\ Graafiset synonyymit                                          
+                                                                
+: K KOTIIN ;                                                    
+: E ETEEN  ;                                                    
+: T TAAKSE ;                                                    
+: V VASEN ;                                                     
+: O OIKEA ;                                                     
+: Y YL\S  ;                                                     
+: A ALAS  ;                                                     
+: UR UUSIRIVI ;                                                 
+: uur ibm-dark ;                                                
+: N[PP[IN?                                                      
+  KEY? DUP ;                                                    
+: N{PP{IN                                                       
+  KEY 0 ;                                                       
+: PURA SEE ;                                                    
+
+
+*** ruutu 23 ****
+\ KUNNIA NIILLE                                                 
+\ JOILLE SE KUULUU                                              
+: FPINO ['] (NAYTA) IS NAYTA ;                                  
+: FORTH-83 FORTH-83 ;                                           
+                                                                
+: CREDO CR CR                                                   
+  ." SAMPO -ohjelma on ohjelmoitu erinomaisen FORTH-83 " CR     
+  ." laajenevan ohjelmointikielen avulla sit{ reippaasti " CR   
+  ." muuttaen ja soveltaen. T{m{n FORTH-83 toteutuksen " CR     
+  ." ovat tehneet ja kaikille vapaaseen k{ytt||n asettaneet " CR
+  ." Henry Laxen ja Michael Perry Kaliforniasta. " CR           
+." SAMPO -kielen copyright koskee vain tekemi{mme laajennuksia. 
+" CR CR                                                         
+." Kari Kuutti,  Heikki Putkonen ja Ilkka Tervonen "            
+CR CR ;                                                         
+PATCH CREDO FORTH-83                                            
+
+
+*** ruutu 24 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 25 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 26 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 27 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 28 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 29 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                

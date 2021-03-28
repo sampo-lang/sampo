@@ -1,0 +1,45 @@
+﻿> )
+SAlM1lP<0> Q KAs1;mYsANm
+COPYRIGHT 1987
+SVSTMIHII @V
+Kmervatio 32. 90650 (XJLU,
+981-301067
+Copyright SYSTIIMI 0y. OULU 30. maaliskuuta 1987 1
+SAMPO
+suomalainen voimistuva ohjelmointikieli
+SAMPO ohjelmointikielen kehittéimisesséi “on pﬁﬁtavoitteeksi otettu kieli,
+jonka avulla ohjelmoinnin ja mikrotietokoneen kéytﬁn oppimiskynnysté
+voitaisiin madaltaa. SAMPO kielen térkein k:'-iyttﬁalue onkin ohjelmoinnin
+ja mikrotietokoneen parusteiden opettamisessa eikéi niinkéﬁn tuotanto-
+ohjelmien tekemisessé. Oppimiskynnyksen madaltamiseen pyritéién suc-
+menkielisellé sanavalikoimalla (késkykannalla) ja aloittamalla opiskelu
+yksinkertaisilla graﬁikkasanoilla. '
+SAMPO ohjelmointikielen sanat ovat siis tavallisia suomenkielen sanoja
+kuten LUO, ETEEN, PIIRR/1, KERTAA jne. Néité sanoja voidaan yhdistéé
+muodostamalla niisté joko komentorivejﬁ tai luomalla uusia sanoja eli
+iaajentamalla SAMPO sanavalikoimaa sopivaan suuntaan. Laajentamis-
+mahdollisuus ja sen joustavaksi Ltekevia' tulkkausominaisuus ovatkin voi-
+mistuvan ohjelmointikielen tunnusmerkit.
+SAMPO ohjelmointikielen sanavalikoima (késkykanta) voidaan jakaa kym-
+meneen ryhméﬁna hallinnan, sy6t6n ja tulostuksen, grafiikan, |aajennet-
+tavuuden, ohjausrakenteidon, pinojen, laskennan, muuttujien ja jonojen.
+listojen késittelyn sekéi tiedostojen ja tiedonhallinnan sanaluokkiin.
+Pmusominaisuus - voimistuvuus - sallii kéiyttﬁjéin aina Iaajentaa
+smavalikoimaansa haluttuun suuntaan eli voimistaa kielté tarvittavilta
+savn.
+SAMPOn grafiikka perustuu kursorin ("konnan') kéytﬁlle. Erotuksena
+muitten ohjelmointikielten grafiikalle SAMPO:n grafiikkakomennot toimi-
+vaz suhteessa 'konnan' kunkinhetkiseen paikkaan ja asentoon. Témé on
+amittelijalle paljon helpommin ymmﬁrrettévissé kuin absoluuttikoordi-
+matiston kéyttd. Ensitutustuminen SAMPO ohjelmointikieleen kéy parhai-
+iezn juuri grafiikan avulla.
+'i‘~;M»/IPO ohjelmointikieli kﬁyttéiid néyttﬁruutua kahtena erillisené alueena -
+f@.,.L1aiueena ja komentoalueena. Komentoaleella annetaan ainoastaan
+>2i_,:*:.ritettavia sanoja ja sen koko on muutettavissa. Tyéaluetta kéiytetﬁén
+Léweinné grafiikan tulostuksaen. Mybs kielen laajennusten taﬂettaminen
+L2-;»ahluu tyﬁalueen avulla. Tyﬁaluaen tallettaminan tapahtuu "ruutuina'
+la»/.*yi<kee|le.
+
+
+
+

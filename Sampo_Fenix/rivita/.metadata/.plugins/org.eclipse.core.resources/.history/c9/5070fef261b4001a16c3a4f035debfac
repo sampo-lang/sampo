@@ -1,0 +1,48 @@
+/*
+ ============================================================================
+ Name        : rivita.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int i, kpl;
+char rivi[83];
+FILE *infile;
+FILE *outfile;
+
+int main(int argc, const char *argv[]) {
+
+	infile = fopen("AUTA.BLK", "rb");
+	if (infile == NULL){
+		printf("infile error\n");
+	}
+
+	outfile = fopen("BOX.TXT", "wb");
+	if (outfile == NULL){
+			printf("outfile error\n");
+			return -1;
+		}
+
+	rivi[80] = '\r';
+	rivi[81] = '\n';
+
+	for (i = 1; i < 10; i++) {
+
+		kpl = fread(rivi, sizeof(char), 80, infile);
+
+		if (kpl < 80) {
+			fclose(infile);
+			fclose(outfile);
+			return EXIT_SUCCESS;
+		}
+		fwrite(rivi, sizeof(char), 82, outfile);
+
+	}
+
+}

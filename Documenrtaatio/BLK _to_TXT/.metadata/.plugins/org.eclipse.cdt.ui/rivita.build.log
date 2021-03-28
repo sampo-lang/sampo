@@ -1,0 +1,19 @@
+19:52:46 **** Incremental Build of configuration Debug for project rivita ****
+make all 
+Building file: ../src/rivita.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rivita.d" -MT"src/rivita.o" -o "src/rivita.o" "../src/rivita.c"
+../src/rivita.c: In function 'main':
+../src/rivita.c:23:15: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |  char *nimi = argv[1];
+      |               ^~~~
+Finished building: ../src/rivita.c
+ 
+Building target: rivita.exe
+Invoking: MinGW C Linker
+gcc  -o "rivita.exe"  ./src/rivita.o   
+Finished building target: rivita.exe
+ 
+
+19:52:48 Build Finished. 0 errors, 1 warnings. (took 1s.959ms)
+

@@ -1,0 +1,570 @@
+
+
+*** ruutu 0 ****
+                                                                
+                                                                
+     BBBB      A     SSS    EEEE                                
+     B   B    A A   S   S   E                                   
+     B   B   A   A   S      E                                   
+     BBBB    AAAAA    S     EEE                                 
+     B   B   A   A     S    E                                   
+     B   B   A   A  S   S   E                                   
+     BBBB    A   A   SSS    EEEE                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 1 ****
+\ POOL:n m{{rittely                                             
+CR .( DATABASE START )                                          
+                                                                
+ALIGN                                                           
+5000 POOL APUXCD                                                
+3000 LIS !                           \ ALKAA KESKELT{           
+APUXCD POBEG DUP LIS 2+  ! STRI 2+  !                           
+APUXCD POEND DUP LIS 4 + ! STRI 4 + !                           
+                                                                
+2 11 THRU                                                       
+                                                                
+CR .( DATABASE OK )                                             
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 2 ****
+\ Stringin ja entryn vienti                                     
+VARIABLE FIELDIT 32 ALLOT                                       
+VARIABLE FTYPE   32 ALLOT    VARIABLE FKPL                      
+VARIABLE VIIMEINEN           VARIABLE APUTIETO                  
+MUUTTUJA S[[NT\              MUUTTUJA KENT[T                    
+                                                                
+: PRINTVIE              \ Refe Ruutu Rivi , -                   
+  SWAP BLOCK SWAP                                               
+  64 * + BUPO !                                                 
+  BUFF-EMIT ON .. BUFF-EMIT OFF                                 
+;                                                               
+: VIE                   \ addr kpl ruutu rivi , -               
+  SWAP BLOCK SWAP                                               
+  64 * +                                                        
+  SWAP CMOVE                                                    
+;                                                               
+
+
+*** ruutu 3 ****
+\ Tuo arvon ruudulta                                            
+                                                                
+: (PRINTTUO)                    \ Ruutu Rivi , Refe             
+  BLK @ >R >IN @ >R                                             
+  SWAP DUP BLK ! BLOCK DROP                                     
+  64 * >IN ! DEFINED                                            
+  IF    EXECUTE                                                 
+  ELSE  NUMBER NORNUM                                           
+  THEN                                                          
+  R> >IN ! R> BLK !                                             
+;                                                               
+: (TUO)                         \ Ruutu Rivi , Addr Len         
+  SWAP BLOCK SWAP 64 * +                                        
+  64 -TRAILING                                                  
+;                                                               
+  ' (TUO) IS TUO        ' (PRINTTUO) IS PRINTTUO                
+
+
+*** ruutu 4 ****
+\ Poimii ehdon t{ytt{v{t                                        
+ VARIABLE DBASE                                                 
+                                                                
+: DBASE-SET                                                     
+  DBASE @ !FILES OPEN-FILE                                      
+;                                                               
+: POIMI                                                         
+  DBASE-SET CR                                                  
+  1 0 PRINTTUO FIX DROP 2 + 2                                   
+  ?DO I NYTRUUTU !                                              
+      S[[NT\ ARVO TEE ==                                        
+      NOLLAKO                                                   
+         IF KENT[T ARVO TEE CR THEN                             
+  LOOP CR                                                       
+;                                                               
+                                                                
+
+
+*** ruutu 5 ****
+\ M{{rittelee kent{n, k{ytt| EVAL:ssa                           
+                                                                
+: TEKSTIKENTT[                                                  
+  >IN @ 64 / 5 2CONSTANT LAST @                                 
+  FIELDIT FKPL @ 2* + !                                         
+  0 FTYPE FKPL @ 2* + !                                         
+  1 FKPL +!                                                     
+;                                                               
+                                                                
+: NUMEROKENTT{                                                  
+  >IN @ 64 / 7 2CONSTANT LAST @                                 
+  FIELDIT FKPL @ 2* + !                                         
+  1 FTYPE FKPL @ 2* + !                                         
+  1 FKPL +!                                                     
+;                                                               
+                                                                
+
+
+*** ruutu 6 ****
+\ Hakee TIB:iin faktan, skippaa alkublanko                      
+: TEETIB                \ - , TIB 64                            
+  TIB 80 BLANK                                                  
+  QUERY                                                         
+  TIB 64 32 SKIP                                                
+  IF   64                                                       
+  ELSE DROP TIB 64                                              
+  THEN                                                          
+;                                                               
+: KYSELE                        \ I , CFA                       
+  2* DUP FIELDIT + @ DUP        \ IND CFA CFA                   
+  CR .ID SWAP FTYPE + @         \ CFA                           
+  IF   ASCII > EMIT                                             
+  ELSE ASCII : EMIT THEN                                        
+  32 EMIT                                                       
+;                                                               
+
+
+*** ruutu 7 ****
+\ Tuhoaa tietueen. Siirto jos v{liss{                           
+: H[VIT[                                \ N , -                 
+  DBASE-SET                                                     
+  FIX DROP 1 + DUP 1 >                                          
+  IF 1 0 PRINTTUO FIX DROP 1+           \ NRUUTU KPLRUUTU       
+     2DUP                               \ NR KPLR NR KPLR       
+     <= IF                                                      
+           DUP 2 - 0 1 0 PRINTVIE UPDATE FLUSH                  
+           2DUP 1-                                              
+           <= IF -1 HOPPED ! SWAP 1+ SWAP CONVEY                
+              ELSE 2DROP THEN                                   
+        ELSE                                                    
+           2DROP                                                
+        THEN                                                    
+  ELSE ." Kentt{m{{rittelyj{ ei voi tuhota " DROP               
+  THEN ;                                                        
+
+
+*** ruutu 8 ****
+\ Lis{{ uuden tietueen                                          
+                                                                
+: LIS[[                                                         
+  DBASE-SET                                                     
+  1 0 PRINTTUO FIX DROP 1+ VIIMEINEN !                          
+  FKPL @ 0 ?DO                                                  
+        I KYSELE TEETIB                                         
+        ROT NAME> EXECUTE DROP                                  
+        VIIMEINEN @ 1+ SWAP VIE                                 
+ LOOP                                                           
+ UPDATE FLUSH                                                   
+ VIIMEINEN @ 0 1 0 PRINTVIE                                     
+ UPDATE FLUSH TIB 80 BLANK                                      
+;                                                               
+                                                                
+                                                                
+
+
+*** ruutu 9 ****
+\ Tietokannan k{ytt||notto                                      
+( QWERTY )                                                      
+MUUTTUJA KINII ( KAIKKITULOSTA ) KINII LLE                      
+MUUTTUJA SINII ( 1 )             SINII LLE                      
+                                                                
+: TIETOKANTA                                                    
+  APUTIETO @ DUP DBASE !                                        
+  IF 0 FKPL !                                                   
+    KINII ARVO KENT{T LLE                                       
+    SINII ARVO S{{NT| LLE                                       
+    1 (LOAD) SAMPO                                              
+    CR ." Tietueita " .. ." kpl " CR                            
+  ELSE                                                          
+    ." Tietokantatiedostoa ei ole avattu " CR                   
+  THEN                                                          
+;                                                               
+
+
+*** ruutu 10 ****
+\ Oletustulostus                                                
+: KAIKKITULOSTA                                                 
+  NYTRUUTU @ 1- ." Tietue nro: " .                              
+  FKPL @ 0 ?DO                                                  
+       FIELDIT I 2* + @ DUP                                     
+       CR .ID ASCII : EMIT 32 EMIT                              
+       NAME> EXECUTE DROP                                       
+       NYTRUUTU @ SWAP TUO TYPE                                 
+       LOOP CR ;                                                
+: LUKUNA                \ KENTT{ , NRO                          
+  DROP NYTRUUTU @ SWAP                                          
+  PRINTTUO                                                      
+;                                                               
+: ALKIONA               \ KENTT{ , ALKIO                        
+  DROP NYTRUUTU @ SWAP TUO                                      
+  HERE PLACE ALKIO 4 ;                                          
+
+
+*** ruutu 11 ****
+\ Haettavan faktan m{{rittely                                   
+: #                                                             
+  [COMPILE] " DROP 6                                            
+;                                                               
+: D.R                   \ N WIDTH , -                           
+  FIX DROP -ROT                                                 
+  FIX ROT D.R                                                   
+;                                                               
+: TAB                   \ COL , -                               
+  FIX DROP #OUT @ MAX                                           
+  #OUT @ - DUP 0 >                                              
+  IF   SPACES                                                   
+  ELSE DROP THEN                                                
+;                                                               
+: TNRO.                                                         
+  NYTRUUTU @ 1- 4 .R ;                                          
+
+
+*** ruutu 12 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 13 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 14 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 15 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 16 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 17 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 18 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 19 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 20 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 21 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 22 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 23 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 24 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 25 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 26 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 27 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 28 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+*** ruutu 29 ****
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                

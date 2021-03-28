@@ -1,0 +1,63 @@
+
+8086 Forth 83 Model 
+Version 2.1.0 Modified 01Jun84 
+32 list 
+Scr # 32         A:UTIHP.BLK 
+  0 \ Positional case defining word                       28AUG83HHL
+  1 ( Subscripts start FROM 0 )
+  2 : OUT   ( # apf -- ) ( report out of range error )
+  3    CR  ." Subscript out of range on "  DUP BODY> >NAME
+  4    .ID  ."    Max is " ?   ."    tried " .  QUIT   ;
+  5 : MAP  ( # apf -- a ) ( convert subscript # to address a )
+  6    2DUP @  U< IF   2+ SWAP 2* +   ELSE   OUT  THEN   ;
+  7 
+  8 : CASE:   (S n --  ) ( define positional case defining word )
+  9    CONSTANT  HIDE    ]
+ 10    DOES>   ( #subscript -- ) ( executes #'th word )
+ 11      MAP   PERFORM   ;
+ 12 
+ 13 
+ 14 
+ 15 
+ ok
+33 list 
+Scr # 33         A:UTIHP.BLK 
+  0 \ ASSOCIATIVE:                Table Lookup Def. Word  01MAR82HHL
+  1 
+  2 : ASSOCIATIVE:
+  3    CONSTANT
+  4    DOES>         (S N -- INDEX )
+  5       DUP @ ( N PFA CNT )   -ROT DUP @ 0 ( CNT N PFA CNT 0 )
+  6       DO   2+   2DUP @ = ( CNT N PFA' BOOL )
+  7          IF 2DROP DROP   I 0 0   LEAVE   THEN
+  8             ( CLEAR STACK AND RETURN INDEX THAT MATCHED )
+  9       LOOP   2DROP   ;
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+ ok
+34 list 
+Scr # 34         A:UTIHP.BLK 
+  0 \ Decompile each type of word                         02Nov83map
+  1 DEFER (SEE)
+  2 HIDDEN DEFINITIONS
+  3 : .WORD       (S IP -- IP' )
+  4    DUP @ >NAME .ID   2+   ;
+  5 : .INLINE     (S IP -- IP' )
+  6    .WORD   DUP @ .   2+   ;
+  7 : .BRANCH     (S IP -- IP' )
+  8    .WORD   DUP @ OVER - .   2+   ;
+  9 : .QUOTE      (S IP -- IP' )
+ 10    .WORD   .WORD   ;
+ 11 : .STRING     (S IP -- IP' )
+ 12    .WORD   COUNT 2DUP TYPE SPACE  + EVEN ;
+ 13 
+ 14 
+ 15 
+ ok
+e E  ? 
+bye 
+103 Pages

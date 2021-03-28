@@ -1,0 +1,49 @@
+/*
+ ============================================================================
+ Name        : rivita.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int i, kpl;
+
+char rivi[67];
+FILE *infile;
+FILE *outfile;
+
+int main(int argc, const char *argv[]) {
+
+	infile = fopen("C:\\sampo\\BASE.BLK", "rb");
+	if (infile == NULL){
+		printf("infile error\n");
+	}
+
+	outfile = fopen("BASE.TXT", "wb");
+	if (outfile == NULL){
+			printf("outfile error\n");
+			return -1;
+		}
+
+	rivi[64] = '\r';
+	rivi[65] = '\n';
+
+	for (i = 1; i < 10000; i++) {
+
+		kpl = fread(rivi, sizeof(char), 64, infile);
+
+		if (kpl < 64) {
+			fclose(infile);
+			fclose(outfile);
+			return EXIT_SUCCESS;
+		}
+		fwrite(rivi, sizeof(char), 66, outfile);
+
+	}
+
+}
